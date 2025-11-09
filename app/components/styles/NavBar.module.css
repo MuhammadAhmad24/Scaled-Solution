@@ -1,0 +1,1639 @@
+/* ------------------- Font Face ------------------- */
+@font-face {
+  font-family: "PolySans";
+  src: url("/fonts/PolySans.woff2");
+}
+
+@font-face {
+  font-family: "Ivar Display";
+  src: url("/fonts/IvarDisplay.woff2");
+}
+
+/* ------------------- NavBar ------------------- */
+.NavBar {
+  font-family: "PolySans";
+  display: flex;
+  width: 100%;
+  background-color: #0B1C23;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 5%;
+  /* margin-top: 20px; */
+  position: relative;
+  z-index: 99;
+}
+
+.svgElement {
+  width: 100%;
+  height: 90%;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+.bgSvgElement {
+  width: 100%;
+  height: 100%;
+  background-image: url("/gear-and-rings-01.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* or 'cover' if you want it to fill */
+  background-position: center;
+}
+
+
+.svgElementsp {
+  width: 70%;
+  height: 90%;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+.svgElementMobile {
+  width: 60%;
+  height: 60%;
+  display: block;
+}
+
+.bgSvgElementMobile {
+  width: 60%;
+  height: 60%;
+  display: block;
+  background-image: url("/gear-and-rings-01.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .svgElementMobile {
+    width: 30vw;
+    height: 30vw;
+    margin: 0 auto;
+  }
+
+  .bgSvgElementMobile {
+    width: 30vw;
+    height: 30vw;
+    margin: 0 auto;
+    display: block;
+    background-image: url("/gear-and-rings-01.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+
+.NavBar .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.NavBar .logo img {
+  width: 112px;
+  height: auto;
+}
+
+.NavBar .logo svg path {
+  fill: #ff682c;
+}
+
+.NavBar .links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.NavBar .links .link {
+  padding: 7px 20px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1ch;
+  color: #CBCBCB;
+  ;
+  font-size: 18px;
+  transition: 0.5s;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.NavBar .links .link svg {
+  transition: 450ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.NavBar .links .link.active svg {
+  transform: rotate(180deg);
+}
+
+.NavBar .links .link.active,
+.NavBar .links .link:hover {
+  background-color: #143b4c;
+}
+
+.NavBar .btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.NavBar .btns .contactButton {
+  background-color: #0B1C23;
+  outline: none;
+  border: none;
+  position: relative;
+  color: #CBCBCB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "PolySans";
+}
+
+.NavBar .btns .contactButton span {
+  transition: 450ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.NavBar .btns .contactButton.active span:nth-child(1) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.NavBar .btns .contactButton span:nth-child(2) {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.NavBar .btns .contactButton.active span:nth-child(2) {
+  opacity: 1;
+  visibility: visible;
+}
+
+.NavBar .btns .contactButton::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #0B1C23;
+  z-index: -1;
+  border-radius: 200px;
+  transition: 450ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.NavBar .btns .contactButton:hover::before {
+  transform: scale(1.05);
+}
+
+.NavBar .btns .contactButton.active::before {
+  background-color: #0B1C23;
+}
+
+.btnMenuHamburger {
+  width: 30px;
+  height: 12px;
+  background-color: #0B1C23;
+  outline: none;
+  border: none;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  transition: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.btnMenuHamburger.active {
+  gap: 0;
+}
+
+.btnMenuHamburger span {
+  height: 1px;
+  width: 100%;
+  background-color: #CBCBCB;
+  transition: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.NavBar .btns .btnaamburger.active span {
+  transition: 0.5s 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.btnMenuHamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(1px);
+}
+
+.btnMenuHamburger.active span:nth-child(2) {
+  transform: rotate(-45deg) translateY(-1px);
+}
+
+/* ------------------- Menus ------------------- */
+/* ------------------- Menu Hamburger ------------------- */
+.menuHamburger {
+  background-color: #0B1C23;
+  backdrop-filter: blur(20px);
+  height: 100%;
+  position: fixed;
+  /* full screen lock */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 51;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s 0.5s ease, opacity 0.5s 0.5s ease;
+  overflow-y: auto;
+  /* allow scrolling */
+  -webkit-overflow-scrolling: touch;
+  /* smooth iOS */
+}
+
+.menuHamburger.active {
+  transition: visibility 0.5s ease, opacity 0.5s ease;
+  z-index: 52;
+  opacity: 1;
+  visibility: visible;
+}
+
+.menuHamburger .option_1::-webkit-scrollbar {
+  display: none;
+}
+
+.menuHamburger::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+
+.menuHamburger .option_1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  position: relative;
+  padding-bottom: 50px;
+  /* space for scroll */
+}
+
+.menuHamburger .option_1 .body {
+  background-color: #0B1C23;
+  width: 100%;
+  padding: 120px 5% 50px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  transform: translateY(-101%);
+  transition: transform 550ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.menuHamburger.active .option_1 .body {
+  transform: translateY(0);
+  transition: transform 850ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.menuHamburger .option_1 .body .contact {
+  position: absolute;
+  bottom: -80px;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding: 0 5%;
+}
+
+.menuHamburger .option_1 .body .contact h3 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 300;
+  font-family: "PolySans";
+  color: rgb(255, 104, 44);
+}
+
+.menuHamburger .option_1 .body .contact button {
+  position: relative;
+  color: rgb(237, 208, 198);
+  outline: none;
+  border: none;
+  font-family: "PolySans";
+  padding: 12px 20px;
+  background-color: transparent;
+  font-size: 16px;
+  z-index: 1;
+}
+
+.menuHamburger .option_1 .body .contact button::before {
+  background-color: #0B1C23;
+  border-radius: 10rem;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  transition: scale 450ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.menuHamburger .option_1 .body .contact button:hover::before {
+  scale: 1.05;
+}
+
+.menuHamburger .option_1 .body .btn {
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 20px;
+  color: rgb(237, 208, 198);
+  font-family: "PolySans";
+  transform: translateY(-60px);
+  opacity: 0;
+  transition: transform 0.3s linear, opacity 250ms linear;
+}
+
+.menuHamburger.active .option_1 .body .btn {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* .menuHamburger .option_1 .body .btn:nth-child(1) {
+}
+.menuHamburger .option_1 .body .btn:nth-child(2) {
+} */
+.menuHamburger.active .option_1 .body .btn:nth-child(3) {
+  transition: transform 650ms 150ms cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 350ms 150ms linear;
+}
+
+.menuHamburger.active .option_1 .body .btn:nth-child(4) {
+  transition: transform 650ms cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 350ms linear;
+}
+
+.menuHamburger .option_1 .body .btn:nth-child(1),
+.menuHamburger .option_1 .body .btn:nth-child(2) {
+  flex-direction: column;
+}
+
+.menuHamburger .option_1 .body .btn .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.menuHamburger .option_1 .body .btn svg {
+  width: 12px;
+  height: 7px;
+  transition: transform 350ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  display: block;
+}
+
+.menuHamburger .option_1 .body .btn.active svg {
+  transform: rotate(180deg);
+}
+
+/* ------------------- Menu ServicesInMenu ------------------- */
+
+.menuHamburger .option_1 .body .btn .menuServicesInMenu {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding-top: 25px;
+}
+
+.menuHamburger .option_1 .body .btn:nth-child(1) {
+  height: 27px;
+  overflow: hidden;
+  transition: height 350ms cubic-bezier(0.455, 0.03, 0.515, 0.955),
+    transform 650ms 450ms cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 350ms 450ms linear,
+    overflow 350ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.menuHamburger .option_1 .body .btn:nth-child(1).active {
+  overflow: visible;
+}
+
+.menuHamburger .option_1 .body .btn .menuServicesInMenu .card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 20px;
+  height: 70%;
+  border-radius: 8px;
+  border: 1px solid #2996a7;
+  min-height: 106px;
+  font-family: "PolySans";
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.menuHamburger .option_1 .body .btn .menuServicesInMenu .card:nth-child(1) {
+  transition: transform 650ms 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 350ms 0.4s linear;
+}
+
+.menuHamburger .option_1 .body .btn .menuServicesInMenu .card:nth-child(2) {
+  transition: transform 650ms 0.4s cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 350ms 0.5s linear;
+}
+
+.menuHamburger .option_1 .body .btn .menuServicesInMenu .card:nth-child(3) {
+  transition: transform 650ms 0.5s cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 350ms 0.6s linear;
+}
+
+.menuHamburger .option_1 .body .btn .menuServicesInMenu .card:nth-child(4) {
+  transition: transform 650ms 0.6s cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 350ms 0.7s linear;
+}
+
+/* .menuHamburger .option_1 .body .btn .menuServicesInMenu .card:nth-child(4) {
+  border: none;
+  background-color: #edd0c6;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: row;
+  color: #ff682c;
+  position: relative;
+} */
+.menuHamburger .option_1 .body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
+  /* ...other styles... */
+}
+
+/* Removed misplaced properties that caused syntax errors */
+.menuHamburger .option_1 .body .btn .menuServicesInMenu .card:nth-child(4) svg {
+  position: absolute;
+  rotate: 180deg;
+  height: calc(100% - 28px);
+  width: auto;
+  top: 14px;
+  right: 11px;
+}
+
+.menuHamburger .option_1 .body .btn.active .menuServicesInMenu .card {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.menuHamburger .option_1 .body .btn .menuServicesInMenu .card span {
+  color: rgb(237, 208, 198);
+  font-family: "PolySans";
+  font-size: 24px;
+}
+
+.menuHamburger .option_1 .body .btn .menuServicesInMenu .card span em {
+  font-family: "Ivar Display";
+  font-size: 26px;
+  font-style: normal;
+}
+
+.menuHamburger .option_1 .body .btn .menuServicesInMenu .card:nth-child(2) span {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  text-wrap: nowrap;
+}
+
+.menuHamburger .option_1 .body .btn .menuServicesInMenu .card:nth-child(2) span:nth-child(1) {
+  display: block;
+}
+
+.menuHamburger .option_1 .body .btn .menuServicesInMenu .card span span:nth-child(2) {
+  color: #ff682c;
+  line-height: 1;
+  font-size: 12px;
+  font-weight: 300;
+  padding-top: 10px;
+}
+
+.menuHamburger .option_1 .body .btn .menuServicesInMenu .card img {
+  width: 100%;
+  height: 100%;
+}
+
+/* ------------------- Menu ServicesInMenu ------------------- */
+
+.menuHamburger .option_1 .body .btn:nth-child(2) {
+  height: 27px;
+  overflow: hidden;
+  transition: height 350ms cubic-bezier(0.455, 0.03, 0.515, 0.955),
+    transform 650ms 300ms cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 350ms 300ms linear,
+    overflow 350ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.menuHamburger .option_1 .body .btn.active:nth-child(2) {
+  overflow: visible;
+}
+
+.menuHamburger .option_1 .body .btn .menuVentrilocInMenu a {
+  transform: translateX(-20px);
+  opacity: 0;
+}
+
+.menuHamburger .option_1 .body .btn .menuVentrilocInMenu a:nth-child(1) {
+  transition: transform 350ms 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955),
+    opacity 250ms 0.2s linear;
+}
+
+.menuHamburger .option_1 .body .btn .menuVentrilocInMenu a:nth-child(2) {
+  transition: transform 350ms 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955),
+    opacity 250ms 0.3s linear;
+}
+
+.menuHamburger .option_1 .body .btn .menuVentrilocInMenu a:nth-child(3) {
+  transition: transform 350ms 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955),
+    opacity 250ms 0.4s linear;
+}
+
+.menuHamburger .option_1 .body .btn .menuVentrilocInMenu a:nth-child(4) {
+  transition: transform 350ms 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955),
+    opacity 250ms 0.5s linear;
+}
+
+.menuHamburger .option_1 .body .btn .menuVentrilocInMenu a:nth-child(5) {
+  transition: transform 350ms 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955),
+    opacity 250ms 0.6s linear;
+}
+
+.menuHamburger .option_1 .body .btn.active .menuVentrilocInMenu a {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.menuHamburger .option_1 .body .btn .menuVentrilocInMenu {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 13px;
+  width: 100%;
+}
+
+.menuHamburger .option_1 .body .btn .menuVentrilocInMenu a {
+  position: relative;
+  padding: 12px 20px;
+  font-size: 18px;
+  line-height: 1;
+  width: 100%;
+  text-align: start;
+}
+
+.menuHamburger .option_1 .body .btn .menuVentrilocInMenu a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  border-bottom: 1px solid #2996a7;
+  transform: scale(0);
+  transform-origin: left;
+}
+
+.menuHamburger .option_1 .body .btn.active .menuVentrilocInMenu a::before {
+  transform: scale(1);
+}
+
+.menuHamburger .option_1 .body .btn.active .menuVentrilocInMenu a:nth-child(1):before {
+  transition: transform 1.05s 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.menuHamburger .option_1 .body .btn.active .menuVentrilocInMenu a:nth-child(2):before {
+  transition: transform 1.05s 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.menuHamburger .option_1 .body .btn.active .menuVentrilocInMenu a:nth-child(3):before {
+  transition: transform 1.05s 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.menuHamburger .option_1 .body .btn.active .menuVentrilocInMenu a:nth-child(4):before {
+  transition: transform 1.05s 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.menuHamburger .option_1 .body .btn.active .menuVentrilocInMenu a:nth-child(5):before {
+  transition: transform 1.05s 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* ------------------- Menu backGround ------------------- */
+
+.menuHamburger .option_1 .backGround {
+  /* background-color: #edd0c6; */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+  transform: translateY(-101%);
+  transition: transform 550ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.menuHamburger.active .option_1 .backGround {
+  transform: translateY(0);
+  transition: transform 850ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.menuHamburger .option_1 .backGround svg {
+  position: absolute;
+  width: 33.2vw;
+  height: auto;
+  bottom: -17.5vw;
+  right: 0;
+}
+
+.menuHamburger .option_1 .backGround svg path {
+  fill: white;
+}
+
+/* ------------------- Menu Services ------------------- */
+.menuServices {
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 51;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s 0.5s ease, opacity 0.5s 0.5s ease;
+  /* تحديد مدة الانتقال 0.5 ثانية */
+}
+
+.menuServices.active {
+  transition: visibility 0.5s ease, opacity 0.5s ease;
+  /* تحديد مدة الانتقال 0.5 ثانية */
+  z-index: 52;
+  opacity: 1;
+  visibility: visible;
+}
+
+.menuServices .backSection {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #0D1D23;
+  width: 100%;
+  z-index: -1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0 5%;
+  transform: translateY(-100%);
+  transition: transform 1.25s 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.menuServices .backSection .figureSvg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 30%;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.menuServices .backSection .figureSvg svg {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: -30%;
+  right: 0;
+}
+
+.menuServices .backSection .figureSvg svg path {
+  fill: #f6e2d8;
+}
+
+.menuServices.active .backSection {
+  transition: transform 1.25s cubic-bezier(0.19, 1, 0.22, 1);
+  transform: translateY(0);
+}
+
+.menuServices .backSection .contact {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.menuServices .backSection .contact h3 {
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 300;
+  font-family: "PolySans";
+  color: #2996a7;
+}
+
+.menuServices .backSection .contact button {
+  position: relative;
+  color: rgb(237, 208, 198);
+  outline: none;
+  border: none;
+  font-family: "PolySans";
+  padding: 12px 20px;
+  background-color: transparent;
+  font-size: 16px;
+}
+
+.menuServices .backSection .contact button::before {
+  background-color: #2996a7;
+  border-radius: 10rem;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  transition: scale 450ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.menuServices .backSection .contact button:hover::before {
+  scale: 1.05;
+}
+
+.menuServices .body {
+  display: flex;
+  /* flex-wrap: wrap; */
+  align-items: stretch;
+
+  /* display: grid;
+  grid-template-columns: repeat(4, 1fr); */
+  justify-content: flex-start;
+  gap: 1.5rem;
+  padding: 120px 5% 50px 5%;
+  width: 100%;
+  background-color: #331613;
+  transform: translateY(calc(-100% - 80px));
+  transition: transform 1.25s 0s cubic-bezier(0.19, 1, 0.22, 1);
+  box-shadow: 0 0 10px 0 rgb(0, 0, 0, 0.5);
+}
+
+.menuServices .body a {
+  display: flex;
+  width: calc(24% - 1.5rem);
+  flex: 1 1 calc(24% - 1.5rem);
+}
+
+.menuServices.active .body {
+  transition: transform 1.25s 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+  transform: translateY(0);
+}
+
+.menuServices .body a object {
+  pointer-events: none;
+}
+
+.menuServices .body .card {
+  display: flex;
+  background-color: #061E27;
+  align-items: flex-start;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  /* flex: 1 1 calc(25% - 1.5rem); */
+  /* flex: 1 1 calc(33% - 1.5rem); */
+  /* max-width: calc(25% - 1.5rem); */
+  /* max-width: calc(33% - 1.5rem); */
+  min-width: 260px;
+  border: 1px solid #2996a7;
+  padding: 34px;
+  /* padding-bottom: 440px; */
+  border-radius: 12px;
+  max-height: 580px;
+  height: 380px;
+  cursor: pointer;
+  transition: 450ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  width: 100%;
+}
+
+
+
+.menuServices .body .card:nth-child(2) {
+  background-color: #061E27;
+}
+
+.menuServices .body .card:nth-child(2) .videoDiv .videoElement {
+  transform: scale(1.9);
+}
+
+.menuServices .body .card:nth-child(3) {
+  background-color: #061E27;
+}
+
+.menuServices .body .card:nth-child(3) .videoDiv .videoElement {
+  transform: scale(1.7);
+}
+
+
+.menuServices .body .card:hover {
+  /* background-color: #0B1C23; */
+  transform: translateY(-20px);
+}
+
+.menuServices .body .card:nth-child(1):hover {
+  /* background-color: #0D1D23; */
+  transform: translateY(-20px);
+}
+
+.menuServices .body .card:nth-child(4):hover {
+  /* background-color: #0D1D23; */
+  transform: translateY(-20px);
+}
+
+.menuServices .body .card .headText {
+  width: 100%;
+  font-size: 40px;
+  color: rgb(237, 208, 198);
+  font-family: "PolySans";
+  font-weight: 300;
+}
+
+.menuServices .body .card:nth-child(4) .headText {
+  width: 100%;
+  font-size: 39px;
+  color: rgb(237, 208, 198);
+  font-family: "PolySans";
+  font-weight: 300;
+}
+
+.menuServices .body .card .videoDiv {
+  width: 230px !important;
+  height: 200px;
+  overflow: hidden;
+}
+
+.menuServices .body .card .videoDiv .videoElement {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.7);
+  transform-origin: center;
+}
+
+/* .menuServices .body .card:nth-child(1) .videoDiv .videoElement {
+  transform: scale(0.9);
+} */
+
+.menuServices .body .card:nth-child(1) .videoDiv .videoElement {
+  transform: scale(1.7);
+
+  transform-origin: center;
+}
+
+.menuServices .body .card:nth-child(4) .videoDiv .videoElement {
+  transform: scale(1.4);
+}
+
+.menuServices .body .card .headText span {
+  font-family: "Ivar Display";
+  font-size: 38.56px;
+}
+
+.menuServices .body .card:nth-child(2) .headText {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.menuServices .body .card:nth-child(2) .headText span:nth-child(1) {
+  font-family: "PolySans";
+}
+
+.menuServices .body .card:nth-child(2) .headText span:nth-child(1) span {
+  font-family: "Ivar Display";
+}
+
+.menuServices .body .card:nth-child(2) .headText span:nth-child(2) {
+  font-family: "PolySans";
+  color: #ff682c;
+  font-size: 16px;
+}
+
+.menuServices .body .card img {
+  width: 100%;
+  height: auto;
+}
+
+/* ------------------- Menu Ventriloc ------------------- */
+.menuVentriloc {
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 51;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s 0.6s linear, opacity 0.5s 0.6s linear;
+  /* تحديد مدة الانتقال 0.5 ثانية */
+}
+
+.menuVentriloc.active {
+  z-index: 52;
+  transition: visibility 0.5s linear, opacity 0.5s linear;
+  /* تحديد مدة الانتقال 0.5 ثانية */
+  opacity: 1;
+  visibility: visible;
+}
+
+.menuVentriloc .body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #331613;
+  padding: 0 5%;
+  width: 100%;
+  /* height: 300px; */
+  position: relative;
+  transition: transform 650ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transform: translateY(-100%);
+  box-shadow: 0 0 10px 0 rgb(0, 0, 0, 0.5);
+}
+
+.menuVentriloc.active .body {
+  transition: transform 1.25s cubic-bezier(0.19, 1, 0.22, 1);
+  transform: translateY(0%);
+}
+
+.menuVentriloc .body::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 5%;
+  height: 100%;
+  width: 1px;
+  /* background-color: #863b32; */
+}
+
+.menuVentriloc .body::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 5%;
+  border-width: 0px;
+  height: 100%;
+  width: 1px;
+  /* background-color: #863b32; */
+}
+
+.menuVentriloc .body .links {
+  padding: 0 40px;
+  padding-top: calc(123px + 116px);
+  padding-bottom: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  border-left: 1px solid #2996a7;
+  border-right: 1px solid #2996a7;
+}
+
+.menuVentriloc .body .links .link {
+  min-width: 350px;
+  font-size: 40px;
+  /* line-height: 40px; */
+  font-family: "PolySans";
+  font-weight: 300;
+  overflow: hidden;
+  color: #edd0c6;
+  transition: color 0.3s;
+  /* تطبيق التأثير عند hover وعند إلغاء hover */
+}
+
+.menuVentriloc .body .links .link:hover {
+  color: #143b4c;
+}
+
+.menuVentriloc .body .links .link span {
+  opacity: 0;
+  display: block;
+  transform: translateY(-100%);
+}
+
+.menuVentriloc.active .body .links .link:nth-child(1) span {
+  transition: transform 0.7s 0.6s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 0.7s 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.menuVentriloc.active .body .links .link:nth-child(2) span {
+  transition: transform 0.7s 0.5s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 0.7s 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.menuVentriloc.active .body .links .link:nth-child(3) span {
+  transition: transform 0.7s 0.4s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 0.7s 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.menuVentriloc.active .body .links .link:nth-child(4) span {
+  transition: transform 0.7s 0.3s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 0.7s 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.menuVentriloc.active .body .links .link:nth-child(5) span {
+  transition: transform 0.7s 0.2s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 0.7s 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.menuVentriloc.active .body .links .link span {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.menuVentriloc .body .links .link:nth-child(1) span {
+  transition: transform 0.7s 0.2s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 0.7s 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.menuVentriloc .body .links .link:nth-child(2) span {
+  transition: transform 0.7s 0.3s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 0.7s 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.menuVentriloc .body .links .link:nth-child(3) span {
+  transition: transform 0.7s 0.4s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 0.7s 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.menuVentriloc .body .links .link:nth-child(4) span {
+  transition: transform 0.7s 0.5s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 0.7s 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.menuVentriloc .body .links .link:nth-child(5) span {
+  transition: transform 0.7s 0.6s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 0.7s 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* ------------------- Menu Contact ------------------- */
+.menuContact {
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 51;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s 0.6s ease, opacity 0.5s 0.6s ease;
+  /* تحديد مدة الانتقال 0.5 ثانية */
+}
+
+.menuContact.active {
+  transition: visibility 0.5s ease, opacity 0.5s ease;
+  /* تحديد مدة الانتقال 0.5 ثانية */
+  z-index: 52;
+  opacity: 1;
+  visibility: visible;
+}
+
+.menuContact .body {
+  background-color: #0B1C23;
+  color: #2996a7;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 120px 5% 50px 5%;
+  width: 100%;
+  position: relative;
+  transform: translateY(-100%);
+  box-shadow: 0 0 10px 0 rgb(0, 0, 0, 0.5);
+  transition: transform 650ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.menuContact.active .body {
+  transform: translateY(0%);
+  transition: transform 1.25s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.menuContact .body .head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0s 650ms linear, opacity 350ms 0.1s linear;
+  transition-delay: 850ms !important;
+}
+
+.menuContact.active .body .head {
+  transition: transform 850ms cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 350ms linear;
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.menuContact .body .head .left {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.menuContact .body .head .left p:first-child {
+  color: #CBCBCB;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "PolySans";
+}
+
+.menuContact .body .head .left p:last-child {
+  color: 2996a7;
+  font-size: 24px;
+  font-weight: 300;
+  font-family: "PolySans";
+}
+
+.menuContact .body .head .right {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.menuContact .body .head .right .link:nth-child(1) {
+  font-family: "PolySans";
+  margin-bottom: 2rem;
+  color: #CBCBCB;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.menuContact .body .head .right .link:nth-child(2),
+.menuContact .body .head .right .link:nth-child(3) {
+  font-family: "PolySans";
+  color: #2996a7;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 300;
+}
+
+.menuContact .body .form {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 3rem;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: transform 0s 650ms linear, opacity 350ms 0.1s linear;
+}
+
+.menuContact.active .body .form {
+  transition: transform 850ms 0.4s cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 350ms 0.4s linear;
+  transition-delay: 550ms;
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.menuContact .body .form .top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.menuContact .body .form .top .right,
+.menuContact .body .form .top .left {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.menuContact .body .form input,
+.menuContact .body .form .top .right input,
+.menuContact .body .form .top .left input {
+  width: 100%;
+  padding: 20px 0;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #2996a7;
+  font-family: "PolySans";
+  color: white;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.menuContact .body .form input::placeholder,
+.menuContact .body .form .top .right input::placeholder,
+.menuContact .body .form .top .left input::placeholder {
+  font-family: "PolySans";
+  color: #CBCBCB;
+}
+
+.menuContact .body .form .btn {
+  display: block;
+  position: absolute;
+  bottom: 5%;
+  right: 0;
+  border: none;
+  outline: none;
+  color: #CBCBCB;
+  height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 20px;
+  font-family: "PolySans";
+  font-weight: 400;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.menuContact .body .form .btn::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: ; */
+  border-radius: 10px;
+  z-index: -1;
+  transition: scale 450ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.menuContact .body .form .btn:hover::before {
+  scale: 1.05;
+}
+
+/* ------------------- Responsive Design ------------------- */
+/* ------------------- 1024px ------------------- */
+@media (max-width: 1024px) {
+  .NavBar {
+    padding: 0 3%;
+    height: 60px;
+  }
+
+  .menuHamburger .option_1 .body {
+    padding: 100px 3% 50px 3% !important;
+  }
+
+  .NavBar .logo svg {
+    width: 231px;
+  }
+
+  .NavBar .links {
+    display: none;
+  }
+
+  .menuContact .body .form input,
+  .menuContact .body .form .top .right input,
+  .menuContact .body .form .top .left input {
+    font-size: 18px;
+  }
+
+  .menuContact .body .form .btn {
+    font-size: 14px;
+    bottom: 4%;
+  }
+
+  .btnMenuHamburger {
+    display: flex;
+  }
+
+  .menuServices,
+  .menuVentriloc {
+    display: none;
+  }
+
+  .menuContact .body {
+    padding: 100px 3% 50px 3%;
+  }
+
+  .menuContact .body .head {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .menuContact .body .head .form {
+    margin-top: 2rem;
+  }
+
+  .menuContact .body .head .right .link:nth-child(1) {
+    margin-bottom: 1rem;
+  }
+
+  .menuContact .body .head .left {
+    gap: 1rem;
+  }
+
+  .menuContact .body .head .right .link:nth-child(2),
+  .menuContact .body .head .right .link:nth-child(3) {
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  .menuContact .body .head .right .link:nth-child(1),
+  .menuContact .body .head .left p:nth-child(1) {
+    font-size: 14px;
+  }
+
+  .menuContact .body .head .left p:nth-child(2) {
+    font-size: 18px;
+  }
+}
+
+/* ------------------- 768px ------------------- */
+@media (max-width: 768px) {
+  .NavBar .logo svg {
+    width: 112px !important;
+    height: auto;
+  }
+
+  .NavBar .logo svg {
+    width: 188px;
+  }
+
+  .NavBar .btns {
+    gap: 1.25rem;
+  }
+
+  .NavBar .btns .contactButton {
+    padding: 7px 15px;
+    height: auto;
+  }
+
+  .NavBar .btns .contactButton span {
+    font-size: 12px;
+  }
+
+  .menuHamburger .option_1 .body {
+    height: 100%;
+  }
+
+  .menuHamburger .option_1 .body .btn .menuServicesInMenu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menuHamburger .option_1 .body .btn .menuServicesInMenu .card {
+    padding: 14px 11px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 11px;
+  }
+
+  .menuHamburger .option_1 .body .btn .menuServicesInMenu .card span span {
+    align-items: center !important;
+  }
+
+  .menuHamburger .option_1 .body .btn .menuServicesInMenu .card img {
+    display: none;
+  }
+
+  .menuHamburger .option_1 .body .btn .menuServicesInMenu .card:nth-child(2) span {
+    text-wrap: wrap;
+  }
+
+  .menuHamburger .option_1 .body .contact,
+  .menuHamburger .option_1 .backGround {
+    display: none;
+  }
+
+  .menuHamburger .option_1 .body .btn .menuServicesInMenu .card span span:nth-child(2) {
+    padding-top: 0;
+  }
+
+  .menuContact .body .form .top {
+    flex-direction: column;
+  }
+
+  .menuContact .body .form .top,
+  .menuContact .body .form .top .right,
+  .menuContact .body .form .top .left {
+    gap: 0;
+  }
+
+  .menuContact .body .form .top .right input,
+  .menuContact .body .form .top .left input {
+    padding: 15px 0;
+  }
+
+  .menuContact .body .form .btn {
+    position: relative;
+    margin-top: 3rem;
+    width: 100%;
+  }
+
+  .menuContact .body .head {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .menuContact .body .head .left p:nth-child(2) br {
+    display: none;
+  }
+}
+
+/* ------------------- 768px ------------------- */
+@media (min-width: 768px) {
+  .NavBar .logo svg {
+    width: 188px;
+  }
+}
+
+@media (max-width:1300px) {
+  .NavBar .links .link {
+    font-size: 16px;
+  }
+}
+
+
+@media (min-width:1700px) {
+  .menuServices .body .card .headText {
+    max-width: 260px;
+  }
+
+  .menuServices .body .card .videoDiv {
+    width: 230px !important;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .menuServices .body .card .videoDiv .videoElement {
+    width: 100%;
+    height: 100%;
+    transform: scale(1.9);
+    transform-origin: center;
+  }
+
+  .menuServices .body .card:nth-child(1) .videoDiv .videoElement {
+    transform: scale(1.7);
+  }
+
+  .menuServices .body .card:nth-child(2) .videoDiv .videoElement {
+    transform: scale(1.9);
+  }
+
+  .menuServices .body .card:nth-child(4) .videoDiv .videoElement {
+    transform: scale(1.2);
+  }
+}
+
+@media (max-width:1400px) {
+  .menuServices .body .card .videoDiv {
+    width: 230px !important;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .menuServices .body .card .videoDiv .videoElement {
+    width: 100%;
+    height: 100%;
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+
+  .menuServices .body .card:nth-child(1) .videoDiv .videoElement {
+    transform: scale(1.7);
+  }
+
+  .menuServices .body .card:nth-child(2) .videoDiv .videoElement {
+    transform: scale(1.9);
+  }
+
+  .menuServices .body .card:nth-child(3) .videoDiv .videoElement {
+    transform: scale(1.7);
+  }
+
+  .menuServices .body .card:nth-child(4) .videoDiv .videoElement {
+    transform: scale(1.4);
+  }
+}
+
+@media (min-width:3000px) {
+  .menuServices .body .card:nth-child(2) .videoDiv .videoElement {
+    transform: scale(1.5);
+  }
+}
+
+
+
+
+
+
+
+
+
+/* =====================
+   Boxed Layout (centered)
+   ===================== */
+.navContainer {
+  max-width: 1200px;
+  /* controls width on large screens */
+  margin: 0 auto;
+  /* centers it */
+  padding: 0 2rem;
+  /* some left/right breathing space */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Keep the background full width */
+.NavBar {
+  background-color: #0b1c23;
+  width: 100%;
+  position: relative;
+  z-index: 100;
+}
+
+/* Optional: subtle shadow on scroll (optional visual polish) */
+.NavBar.scrolled {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1380px) {
+  .menuServices .body .card {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .menuServices .body .card {
+    padding: 20px;
+    min-width: unset;
+  }
+
+  .menuServices .body .card .headText {
+    font-size: 32px;
+  }
+
+  .menuServices .body .card .headText span {
+    font-size: 28px;
+  }
+
+
+}

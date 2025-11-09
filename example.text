@@ -1,0 +1,120 @@
+part of card that scroll and its size increases = "
+gsap.fromTo(
+      `.${styles.section_2} .${styles.body} .${styles.video}`,
+      {
+        y: 100,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        delay: 1.6,
+        duration: 0.8,
+      }
+    );
+
+
+
+
+if (!isMobile) {
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.to(
+        `.${styles.section_2} .${styles.body} .${styles.video} .${styles.vid}`,
+        {
+          width: "1000px",
+          scrollTrigger: {
+            trigger: `.${styles.section_2}`,
+            start: "top 33%",
+            end: "bottom bottom",
+            scrub: true,
+            // markers: true,
+          },
+        }
+      );
+    }
+    
+    
+    
+    <div className={styles.video}>
+             <div className={styles.vid}>
+  <div
+    className="pretty-card"
+    style={{
+      background: 'white',
+      color: '#401d19',
+      padding: '4% 5%',
+      display: 'flex',
+      flexDirection: 'row',
+      height: '100%',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      borderRadius: '16px',
+    }}
+  >
+    <div
+      className="pretty-content"
+      style={{
+        width: '50%',
+        fontFamily: `'Segoe UI', sans-serif`,
+      }}
+    >
+      <h2
+        style={{
+          margin: '0 0 1rem',
+          fontSize: '2rem',
+          fontWeight: 'bold',
+          color: '#401d19',
+        }}
+      >
+        Elegant Card Title
+      </h2>
+      <p
+        style={{
+          fontSize: '1.1rem',
+          lineHeight: '1.6',
+          color: '#401d19',
+        }}
+      >
+        This paragraph explains the content in the left section of the card. It emphasizes readability with a refined typography and layout.
+      </p>
+    </div>
+
+    <div
+      className="pretty-video"
+      style={{
+        width: '40%',
+      }}
+    >
+      <div
+        className="pretty-video-wrapper"
+        style={{
+          position: 'relative',
+          width: '100%',
+          paddingBottom: '56.25%', // 16:9
+          height: 0,
+          borderRadius: '12px',
+          overflow: 'hidden',
+          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.4)',
+        }}
+      >
+        <iframe
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="Featured Video"
+          frameBorder="0"
+          allowFullScreen
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            border: 'none',
+            borderRadius: '12px',
+          }}
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+            </div>"

@@ -1,0 +1,47 @@
+:root {
+  /* ===== Core Theme ===== */
+  --color-background-dark: #0B1C23;  /* main dark background */
+  --color-primary: #198190;          /* teal accent */
+  --color-primary-light: #22A8B5;    /* lighter teal highlight */
+  --color-text-main: #D6F0F2;        /* main heading text */
+  --color-text-muted: #B8C4C6;       /* body / paragraph text */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* ===== Utility Colors ===== */
+  --color-transparent: rgba(0, 0, 0, 0);
+  --color-current: currentColor;
+
+  /* ===== Optional Supporting Shades ===== */
+  --color-border: rgba(255, 255, 255, 0.2);
+  --color-hover: #1B8C98;           /* button hover */
+  --color-bg-light: #133038;        /* slightly lighter section bg */
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0;
+}
+html,
+body {
+}
+body {
+  overflow-x: hidden ;
+  color: #edd0c6;
+  background: #163948;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #2996a7;
+  border-radius: 3px;
+}
+a,
+button {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}

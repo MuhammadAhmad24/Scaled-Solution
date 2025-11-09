@@ -1,0 +1,524 @@
+/* ========== Team Expansion Page ========== */
+
+.team-hero {
+  background-color: var(--color-background-dark);
+  color: var(--color-white);
+  padding: 6rem 8%;
+  padding-bottom: 0rem !important;
+  display: flex;
+  justify-content: center; 
+}
+
+/* Reuse same alignment setup */
+.aligned-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+  width: 100%;
+  max-width: 1400px; 
+  margin: 0 auto; 
+}
+
+/* ===== Left Column ===== */
+.left-column {
+  flex: 0 0 65%;
+}
+
+.left-column h1 {
+  font-size: 3.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--color-text-main);
+  margin-bottom: 2rem;
+}
+
+.left-column p {
+  margin-bottom: 2rem;
+}
+
+.highlight {
+  color: var(--color-primary);
+}
+
+.cta-btn {
+  background-color: var(--color-primary);
+  border: none;
+  color: var(--color-white);
+  padding: 12px 30px;
+  border-radius: 9999px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-bottom: 3rem;
+}
+
+.cta-btn2 {
+  background-color: #cbcbcb;
+  border: none;
+  color: #198190;
+  padding: 12px 30px;
+  border-radius: 9999px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-bottom: 3rem;
+  margin-left: 10px;
+}
+
+.cta-btn:hover {
+  background-color: var(--color-hover);
+}
+
+/* ===== Right Column ===== */
+.right-column {
+  flex: 0 0 35%;
+}
+
+.section-label {
+  color: var(--color-primary);
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.right-column p {
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  font-size: 1.05rem;
+  max-width: 350px;
+}
+
+/* ===== Image Section ===== */
+.team-image-section {
+  background-color: var(--color-bg-light);
+  padding: 6rem 8%;
+  color: var(--color-white);
+}
+
+.team-image-section h2 {
+  font-size: 3.2rem;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 3rem;
+  color: var(--color-text-main);
+}
+
+.team-left {
+  flex: 0 0 65%;
+}
+
+.team-left ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  padding-right: 8rem;
+  color: var(--color-text-muted);
+  line-height: 1.9;
+  font-size: 1.05rem;
+}
+
+.team-left li {
+  margin-bottom: 1.2rem;
+}
+
+.team-left li strong {
+  color: var(--color-white);
+}
+
+.team-right {
+  flex: 0 0 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-image {
+  width: 100%;
+  border: 1px solid var(--color-primary);
+  border-radius: 8px;
+  object-fit: cover;
+  max-width: 480px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1000px) {
+  .aligned-container {
+    flex-direction: column;
+  }
+
+  .left-column,
+  .right-column,
+  .team-left,
+  .team-right {
+    flex: 1 1 100%;
+  }
+
+  .left-column h1,
+  .team-image-section h2 {
+    font-size: 2.3rem;
+  }
+
+  .team-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+
+
+
+
+/* team expansion  */
+
+/* ===== The Offer Section ===== */
+.the-offer-section {
+    background-color: #0B1C23;
+  padding: 6rem 8%;
+  color: var(--color-white);
+}
+
+.main-offer-sec{
+    padding: 5rem 3rem;
+    background-color: #041e29;
+}
+
+.offer-header {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  justify-content: space-between;
+  align-items: flex-start; /* Align title/checklist to top-left */
+  gap: 2rem; /* Space between header components */
+  margin-bottom: 4rem;
+  max-width: 1200px; /* Constrain width similar to screenshot */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.offer-title {
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: var(--color-text-main); /* Your existing text color */
+  line-height: 1.2;
+  margin: 0;
+  flex-basis: 30%; /* Gives enough space for the title */
+  min-width: 250px; /* Ensure title doesn't get too small */
+  margin-bottom: 3rem !important;
+}
+
+.offer-checklist {
+  flex-basis: 45%; /* Checklist takes more space than title */
+  min-width: 300px; /* Ensure checklist is readable */
+  margin-top: 0.5rem; /* Slight alignment with title if needed */
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.offer-checklist p {
+  font-size: 1rem;
+  color: var(--color-white); /* White text for checklist items */
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.check-icon {
+  color: #198190; /* This seems to be the color-primary from the screenshot's checkmark */
+  font-size: 1.1rem;
+  line-height: 1;
+  font-weight: bold;
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.offer-header-icon {
+  flex-basis: 15%; /* Space for the icon on the right */
+  min-width: 100px; /* Ensure icon area isn't too cramped */
+  display: flex;
+  justify-content: flex-end; /* Push icon to the right */
+  align-items: flex-start; /* Align icon to the top */
+}
+
+.offer-circle-icon {
+  width: 100px; /* Size of the circle */
+  height: 100px;
+  border-radius: 50%;
+  background-color: transparent; /* No fill */
+  border: 2px solid #198190; /* Same as highlight color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Placeholder icons - these would ideally be SVGs or proper icon fonts */
+/* I'm using simple box shadows and borders to simulate the look */
+.icon-people {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    width: 20px;
+    height: 20px;
+    background-color: #198190; /* Icon color */
+    border-radius: 50%; /* Head */
+    box-shadow: 0 15px 0 0 #198190, /* Body */
+                25px 0 0 0 #198190, /* Second head */
+                25px 15px 0 0 #198190; /* Second body */
+    /* Adjust these for a more accurate icon if using a font library or SVG */
+}
+
+.icon-chat {
+    position: absolute;
+    top: 20%;
+    right: 15%;
+    width: 25px;
+    height: 15px;
+    background-color: #198190; /* Chat bubble color */
+    border-radius: 5px;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 70% 70%, 50% 100%, 40% 70%, 0% 70%); /* Simple speech bubble shape */
+}
+
+
+/* Offer Cards */
+.offer-cards-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.offer-card {
+  background-color: #0b1c23; /* Directly from screenshot color */
+  border-radius: 8px;
+  padding: 2.5rem;
+  flex: 1; /* Allows cards to grow and shrink */
+  min-width: 280px; /* Minimum width before stacking */
+  max-width: 380px; /* Max width for individual cards */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.3s ease;
+}
+
+.offer-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #198190; /* Matches highlight color */
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.code-icon {
+  color: var(--color-white);
+  font-size: 2.5rem; /* Larger font size for the icon */
+  font-weight: bold;
+}
+
+.offer-card h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--color-white); /* White for card titles */
+  margin-bottom: 1rem;
+}
+
+.offer-card p {
+  font-size: 0.95rem;
+  color: #c0c0c0; /* Slightly lighter gray for card description */
+  line-height: 1.6;
+}
+
+/* Responsive adjustments for the offer section */
+@media (max-width: 1000px) {
+  .offer-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .offer-title,
+  .offer-checklist,
+  .offer-header-icon {
+    flex-basis: 100%; /* Stack elements */
+    min-width: auto;
+    width: 100%;
+  }
+  .offer-header-icon {
+    justify-content: flex-start; /* Move icon to left under other content */
+    margin-top: 1rem;
+  }
+  .offer-cards-container {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center stacked cards */
+  }
+  .offer-card {
+    max-width: 90%; /* Allow cards to take up more width when stacked */
+  }
+}
+
+@media (max-width: 600px) {
+    .offer-header-icon{
+        display: none;
+    }
+  .offer-title {
+    font-size: 2.5rem;
+  }
+  .offer-card {
+    padding: 2rem;
+    min-width: unset; /* Remove min-width for very small screens */
+    width: 100%; /* Take full width on small screens */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== Image Sections (Below Offer) ===== */
+
+.team-image-group {
+  background-color: var(--color-background-dark);
+  padding: 6rem 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem; /* spacing between the three image sections */
+}
+
+.image-section {
+  text-align: center;
+  width: 100%;
+  max-width: 1200px; /* same center width as rest of page */
+  margin: 0 auto;
+  margin-bottom: 10rem;
+}
+
+.image-section-title {
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: var(--color-text-main);
+  margin-bottom: 5rem;
+}
+
+.image-section-img {
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 12px;
+  /* border: 1px solid #198190; */
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.image-section-img:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .image-section-title {
+    font-size: 2rem;
+  }
+  .image-section-img {
+    max-width: 100%;
+  }
+}
+
+
+
+.iconimg{
+  margin-bottom: 2rem;
+}
+
+.offerimg{
+  object-fit: cover;
+}
+
+.team-hero{
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-blob {
+  position: absolute;
+  right: -100px;
+  bottom: -250px;
+  width: 600px;
+  height: 600px;
+  z-index: 0;
+  opacity: 0.6;
+  filter: blur(50px);
+  animation: slowFloat 20s ease-in-out infinite alternate;
+}
+
+@keyframes slowFloat {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+
+  100% {
+    transform: translateY(-20px) scale(1.05);
+  }
+}
+
+.animated-circle {
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle at center, rgba(0, 191, 255, 0.25), transparent 70%);
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: floaty 10s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* === Elegant Animated Grid Background === */
+.animated-grid {
+  position: fixed;
+  inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+  animation: gridMove 30s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes gridMove {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 80px 80px;
+  }
+}
+
+
+
+
+
+
+
+@media (max-width:600px) {
+  .hero-blob,.animated-circle{
+    display: none;
+  }
+}

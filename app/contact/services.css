@@ -1,0 +1,246 @@
+.menuContact {
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  height: 100%;
+  width: 100%;
+}
+
+.menuContact .body {
+  background-color: #0B1C23;
+  color: #2996a7;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 120px 5% 50px 5%;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0 10px 0 rgb(0, 0, 0, 0.5);
+}
+
+.menuContact .body .head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menuContact .body .head .left {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.menuContact .body .head .left p:first-child {
+  color: #CBCBCB;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "PolySans";
+}
+
+.menuContact .body .head .left p:last-child {
+  color: 2996a7;
+  font-size: 24px;
+  font-weight: 300;
+  font-family: "PolySans";
+}
+
+.menuContact .body .head .right {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.menuContact .body .head .right .link:nth-child(1) {
+  font-family: "PolySans";
+  margin-bottom: 2rem;
+  color: #CBCBCB;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.menuContact .body .head .right .link:nth-child(2),
+.menuContact .body .head .right .link:nth-child(3) {
+  font-family: "PolySans";
+  color: #2996a7;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 300;
+}
+
+.menuContact .body .form {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 3rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.menuContact .body .form .top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.menuContact .body .form .top .right,
+.menuContact .body .form .top .left {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.menuContact .body .form input,
+.menuContact .body .form .top .right input,
+.menuContact .body .form .top .left input {
+  width: 100%;
+  padding: 20px 0;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #2996a7;
+  font-family: "PolySans";
+  color: white;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.menuContact .body .form input::placeholder,
+.menuContact .body .form .top .right input::placeholder,
+.menuContact .body .form .top .left input::placeholder {
+  font-family: "PolySans";
+  color: #CBCBCB;
+}
+
+.menuContact .body .form .btn {
+  display: block;
+  border: none;
+  outline: none;
+  color: #CBCBCB;
+  height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 20px;
+  font-family: "PolySans";
+  font-weight: 400;
+  background-color: transparent;
+  z-index: 1;
+  margin-top: 1.5rem;
+  position: relative;
+  margin-left: auto;
+}
+
+.menuContact .body .form .btn::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #2996a7;
+  border-radius: 10px;
+  z-index: -1;
+  transition: scale 450ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.menuContact .body .form .btn:hover::before {
+  scale: 1.05;
+}
+
+
+@media (max-width: 1024px) {
+
+
+
+
+  .menuContact .body .form input,
+  .menuContact .body .form .top .right input,
+  .menuContact .body .form .top .left input {
+    font-size: 18px;
+  }
+
+  .menuContact .body .form .btn {
+    font-size: 14px;
+  }
+
+  .menuContact .body {
+    padding: 100px 3% 50px 3%;
+  }
+
+  .menuContact .body .head {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .menuContact .body .head .form {
+    margin-top: 2rem;
+  }
+
+  .menuContact .body .head .right .link:nth-child(1) {
+    margin-bottom: 1rem;
+  }
+
+  .menuContact .body .head .left {
+    gap: 1rem;
+  }
+
+  .menuContact .body .head .right .link:nth-child(2),
+  .menuContact .body .head .right .link:nth-child(3) {
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  .menuContact .body .head .right .link:nth-child(1),
+  .menuContact .body .head .left p:nth-child(1) {
+    font-size: 14px;
+  }
+
+  .menuContact .body .head .left p:nth-child(2) {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+
+
+
+
+  .menuContact .body .form .top {
+    flex-direction: column;
+  }
+
+  .menuContact .body .form .top,
+  .menuContact .body .form .top .right,
+  .menuContact .body .form .top .left {
+    gap: 0;
+  }
+
+  .menuContact .body .form .top .right input,
+  .menuContact .body .form .top .left input {
+    padding: 15px 0;
+  }
+
+  .menuContact .body .form .btn {
+    width: 100%;
+  }
+
+  .menuContact .body .head {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .menuContact .body .head .left p:nth-child(2) br {
+    display: none;
+  }
+}
