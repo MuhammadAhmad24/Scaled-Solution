@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300"
+    preserveAspectRatio="xMidYMid meet"
+>
+    <defs>
+        <clipPath id="__lottie_element_4304">
+            <rect width="400" height="300" x="0" y="0"></rect>
+        </clipPath>
+        <mask id="__lottie_element_4305" mask-type="alpha">
+            <g transform="matrix(1,0,0,1,200,150)" opacity="1">
+                <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                    <path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0"
+                        stroke-miterlimit="4" stroke="rgb(255,27,0)" stroke-opacity="1"
+                        stroke-width="1" d=" M-72.5,-37 C-72.5,-37 142,-37 142,-37"></path>
+                </g>
+            </g>
+        </mask>
+        <mask id="__lottie_element_4311" mask-type="alpha">
+            <g transform="matrix(1,0,0,1,200,150)" opacity="1">
+                <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                    <path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0"
+                        stroke-miterlimit="4" stroke="rgb(255,27,0)" stroke-opacity="1"
+                        stroke-width="1" d=" M-1,-108.5 C-1,-108.5 -1,107 -1,107"></path>
+                </g>
+            </g>
+        </mask>
+        <mask id="__lottie_element_4317" mask-type="alpha">
+            <g transform="matrix(1,0,0,1,200,150)" opacity="1">
+                <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                    <path stroke="url(#__lottie_element_4320)" stroke-linecap="butt"
+                        stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4"
+                        stroke-opacity="1" stroke-width="1"
+                        d=" M-143.5,35 C-143.5,35 70.5,35.5 70.5,35.5 C70.5,35.5 70.5,-108.25 70.5,-108.25"></path>
+                </g>
+            </g>
+        </mask>
+        <linearGradient id="__lottie_element_4320" spreadMethod="pad" gradientUnits="userSpaceOnUse"
+            x1="0" y1="0" x2="100" y2="0">
+            <stop offset="0%" stop-color="rgb(255,104,44)"></stop>
+            <stop offset="50%" stop-color="rgb(195,82,47)"></stop>
+            <stop offset="100%" stop-color="rgb(134,59,50)"></stop>
+        </linearGradient>
+        <linearGradient id="__lottie_element_4339" spreadMethod="pad" gradientUnits="userSpaceOnUse"
+            x1="-37.12300109863281" y1="37.064998626708984" x2="13.956999778747559"
+            y2="-16.906999588012695">
+            <stop offset="0%" stop-color="rgb(255,104,44)"></stop>
+            <stop offset="50%" stop-color="rgb(195,82,47)"></stop>
+            <stop offset="100%" stop-color="rgb(134,59,50)"></stop>
+        </linearGradient>
+        <linearGradient id="__lottie_element_4343" spreadMethod="pad" gradientUnits="userSpaceOnUse"
+            x1="-37.12300109863281" y1="37.064998626708984" x2="13.956999778747559"
+            y2="-16.906999588012695">
+            <stop offset="0%" stop-color="rgb(255,104,44)"></stop>
+            <stop offset="50%" stop-color="rgb(195,82,47)"></stop>
+            <stop offset="100%" stop-color="rgb(134,59,50)"></stop>
+        </linearGradient>
+        <linearGradient id="__lottie_element_4347" spreadMethod="pad" gradientUnits="userSpaceOnUse"
+            x1="-37.12300109863281" y1="37.064998626708984" x2="13.956999778747559"
+            y2="-16.906999588012695">
+            <stop offset="0%" stop-color="rgb(255,104,44)"></stop>
+            <stop offset="50%" stop-color="rgb(195,82,47)"></stop>
+            <stop offset="100%" stop-color="rgb(134,59,50)"></stop>
+        </linearGradient>
+    </defs>
+    <g clip-path="url(#__lottie_element_4304)">
+        <g transform="matrix(1,0,0,1,164,220.875)" opacity="1">
+            <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                <path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0"
+                    stroke-miterlimit="4" stroke="rgb(134,59,50)" stroke-opacity="1"
+                    stroke-width="1"
+                    d=" M-36,-36 C-36,-36 36,-36 36,-36 C36,-36 36,36 36,36 C36,36 -36,36 -36,36 C-36,36 -36,-36 -36,-36z"></path>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,164,149)" opacity="1">
+            <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                <path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0"
+                    stroke-miterlimit="4" stroke="rgb(134,59,50)" stroke-opacity="1"
+                    stroke-width="1"
+                    d=" M-36,-36 C-36,-36 36,-36 36,-36 C36,-36 36,36 36,36 C36,36 -36,36 -36,36 C-36,36 -36,-36 -36,-36z"></path>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,235.5,149)" opacity="1">
+            <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                <path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0"
+                    stroke-miterlimit="4" stroke="rgb(134,59,50)" stroke-opacity="1"
+                    stroke-width="1"
+                    d=" M-36,-36 C-36,-36 36,-36 36,-36 C36,-36 36,36 36,36 C36,36 -36,36 -36,36 C-36,36 -36,-36 -36,-36z"></path>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,235.5,77.5)" opacity="1">
+            <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                <path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0"
+                    stroke-miterlimit="4" stroke="rgb(134,59,50)" stroke-opacity="1"
+                    stroke-width="1"
+                    d=" M-36,-36 C-36,-36 36,-36 36,-36 C36,-36 36,36 36,36 C36,36 -36,36 -36,36 C-36,36 -36,-36 -36,-36z"></path>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,199.5,113.5)" opacity="1">
+            <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                <path fill="rgb(233,106,53)" fill-opacity="1"
+                    d=" M-2.5,-2.5 C-2.5,-2.5 2.5,-2.5 2.5,-2.5 C2.5,-2.5 2.5,2.5 2.5,2.5 C2.5,2.5 -2.5,2.5 -2.5,2.5 C-2.5,2.5 -2.5,-2.5 -2.5,-2.5z"></path>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,199.5,184.5)" opacity="1">
+            <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                <path fill="rgb(233,106,53)" fill-opacity="1"
+                    d=" M-2.5,-2.5 C-2.5,-2.5 2.5,-2.5 2.5,-2.5 C2.5,-2.5 2.5,2.5 2.5,2.5 C2.5,2.5 -2.5,2.5 -2.5,2.5 C-2.5,2.5 -2.5,-2.5 -2.5,-2.5z"></path>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,307,77.5)" opacity="1">
+            <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                <path stroke="url(#__lottie_element_4347)" stroke-linecap="butt"
+                    stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4"
+                    stroke-opacity="1" stroke-width="1"
+                    d=" M-36,36 C-36,36 36,36 36,36 C36,-3.7639999389648438 3.765000104904175,-36 -35.999000549316406,-36 C-35.99599838256836,-36 -36,36 -36,36z"></path>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,-1,306.75,220.75)" opacity="1">
+            <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                <path stroke="url(#__lottie_element_4343)" stroke-linecap="butt"
+                    stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4"
+                    stroke-opacity="1" stroke-width="1"
+                    d=" M-36,36 C-36,36 36,36 36,36 C36,-3.7639999389648438 3.765000104904175,-36 -35.999000549316406,-36 C-35.99599838256836,-36 -36,36 -36,36z"></path>
+            </g>
+        </g>
+        <g transform="matrix(-1,0,0,-1,92.25,221)" opacity="1">
+            <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                <path stroke="url(#__lottie_element_4339)" stroke-linecap="butt"
+                    stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4"
+                    stroke-opacity="1" stroke-width="1"
+                    d=" M-36,36 C-36,36 36,36 36,36 C36,-3.7639999389648438 3.765000104904175,-36 -35.999000549316406,-36 C-35.99599838256836,-36 -36,36 -36,36z"></path>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,271,113.5)" opacity="1">
+            <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                <path fill="rgb(233,106,53)" fill-opacity="1"
+                    d=" M-2.5,-2.5 C-2.5,-2.5 2.5,-2.5 2.5,-2.5 C2.5,-2.5 2.5,2.5 2.5,2.5 C2.5,2.5 -2.5,2.5 -2.5,2.5 C-2.5,2.5 -2.5,-2.5 -2.5,-2.5z"></path>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,271,184.5)" opacity="1">
+            <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                <path fill="rgb(233,106,53)" fill-opacity="1"
+                    d=" M-2.5,-2.5 C-2.5,-2.5 2.5,-2.5 2.5,-2.5 C2.5,-2.5 2.5,2.5 2.5,2.5 C2.5,2.5 -2.5,2.5 -2.5,2.5 C-2.5,2.5 -2.5,-2.5 -2.5,-2.5z"></path>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,128.5,256.68798828125)" opacity="1">
+            <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                <path fill="rgb(233,106,53)" fill-opacity="1"
+                    d=" M-2.5,-2.5 C-2.5,-2.5 2.5,-2.5 2.5,-2.5 C2.5,-2.5 2.5,2.5 2.5,2.5 C2.5,2.5 -2.5,2.5 -2.5,2.5 C-2.5,2.5 -2.5,-2.5 -2.5,-2.5z"></path>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,128.5,184.5)" opacity="1">
+            <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                <path fill="rgb(233,106,53)" fill-opacity="1"
+                    d=" M-2.5,-2.5 C-2.5,-2.5 2.5,-2.5 2.5,-2.5 C2.5,-2.5 2.5,2.5 2.5,2.5 C2.5,2.5 -2.5,2.5 -2.5,2.5 C-2.5,2.5 -2.5,-2.5 -2.5,-2.5z"></path>
+            </g>
+        </g>
+        <g mask="url(#__lottie_element_4317)">
+            <g transform="matrix(0,-1,1,0,237.16000366210938,-73.74703216552734)" opacity="1">
+                <g opacity="1" transform="matrix(1,0,0,1,-120.0780029296875,34.09000015258789)">
+                    <path fill="rgb(255,104,44)" fill-opacity="1"
+                        d=" M9.92199993133545,-6.090000152587891 C9.92199993133545,-6.090000152587891 9.92199993133545,6.090000152587891 9.92199993133545,6.090000152587891 C9.92199993133545,6.090000152587891 -9.92199993133545,6.090000152587891 -9.92199993133545,6.090000152587891 C-9.92199993133545,6.090000152587891 -9.92199993133545,-6.090000152587891 -9.92199993133545,-6.090000152587891 C-9.92199993133545,-6.090000152587891 9.92199993133545,-6.090000152587891 9.92199993133545,-6.090000152587891z"></path>
+                </g>
+            </g>
+        </g>
+        <g mask="url(#__lottie_element_4311)">
+            <g transform="matrix(0,-1,1,0,165.91000366210938,-97.39456176757812)" opacity="1">
+                <g opacity="1" transform="matrix(1,0,0,1,-120.0780029296875,34.09000015258789)">
+                    <path fill="rgb(255,104,44)" fill-opacity="1"
+                        d=" M9.92199993133545,-6.090000152587891 C9.92199993133545,-6.090000152587891 9.92199993133545,6.090000152587891 9.92199993133545,6.090000152587891 C9.92199993133545,6.090000152587891 -9.92199993133545,6.090000152587891 -9.92199993133545,6.090000152587891 C-9.92199993133545,6.090000152587891 -9.92199993133545,-6.090000152587891 -9.92199993133545,-6.090000152587891 C-9.92199993133545,-6.090000152587891 9.92199993133545,-6.090000152587891 9.92199993133545,-6.090000152587891z"></path>
+                </g>
+            </g>
+        </g>
+        <g mask="url(#__lottie_element_4305)">
+            <g transform="matrix(1,0,0,1,228.5780029296875,79.53500366210938)" opacity="1">
+                <g opacity="1" transform="matrix(1,0,0,1,-120.0780029296875,34.09000015258789)">
+                    <path fill="rgb(255,104,44)" fill-opacity="1"
+                        d=" M9.92199993133545,-6.090000152587891 C9.92199993133545,-6.090000152587891 9.92199993133545,6.090000152587891 9.92199993133545,6.090000152587891 C9.92199993133545,6.090000152587891 -9.92199993133545,6.090000152587891 -9.92199993133545,6.090000152587891 C-9.92199993133545,6.090000152587891 -9.92199993133545,-6.090000152587891 -9.92199993133545,-6.090000152587891 C-9.92199993133545,-6.090000152587891 9.92199993133545,-6.090000152587891 9.92199993133545,-6.090000152587891z"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
