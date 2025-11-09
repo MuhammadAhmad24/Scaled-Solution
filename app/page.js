@@ -8,7 +8,7 @@ import FinalService from './components/FinalService'
 import Link from "next/link";
 import ScrollingCards from './components/ScrollingCards'
 gsap.registerPlugin(ScrollTrigger);
-import { valueAtPercentage, ScrollObserver } from 'aatjs'
+// import { valueAtPercentage, ScrollObserver } from 'aatjs'
 const cardData = [
 
   {
@@ -1674,3 +1674,4 @@ show its logic of matrix scorlling of text */}
     </div>
   );
 }
+
