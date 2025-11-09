@@ -6,7 +6,13 @@ import NavBar from "./components/NavBar";
 import NewFooter from "./components/NewFooter";
 import FinalService from './components/FinalService'
 import Link from "next/link";
-import ScrollingCards from './components/ScrollingCards'
+// import ScrollingCards from './components/ScrollingCards'
+import dynamic from "next/dynamic";
+
+const ScrollingCards = dynamic(() => import('./components/ScrollingCards'), {
+  ssr: false
+});
+
 gsap.registerPlugin(ScrollTrigger);
 // import { valueAtPercentage, ScrollObserver } from 'aatjs'
 const cardData = [
@@ -1674,4 +1680,5 @@ show its logic of matrix scorlling of text */}
     </div>
   );
 }
+
 
