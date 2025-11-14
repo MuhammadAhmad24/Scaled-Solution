@@ -220,6 +220,46 @@
   max-width: 100%;
 }
 
+.bgSvgElementcloud {
+  width: 100%;
+  height: 13.3vw;
+  background-image: url("/cloud_service.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* or 'cover' if you want it to fill */
+  background-position: center;
+}
+
+.bgSvgElement {
+  width: 100%;
+  height: 13.3vw;
+  background-image: url("/gear-and-rings-01.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* or 'cover' if you want it to fill */
+  background-position: center;
+}
+
+.bgSvgElementintegration {
+  width: 100%;
+  height: 13.3vw;
+  background-image: url("/gear-and-rings-01.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* or 'cover' if you want it to fill */
+  background-position: center;
+}
+
+.bgSvgElementproduct {
+  width: 100%;
+  height: 13.3vw;
+  background-image: url("/Product_service.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* or 'cover' if you want it to fill */
+  background-position: center;
+}
+
 .section_3 .head h2 span {
   /* align-self: stretch; */
   background-color: #0B1C23;

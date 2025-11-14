@@ -99,7 +99,7 @@ useEffect(() => {
         "Automate workflows for efficiency and speed.",
         "Retrieve deeper value from your data integration.",
       ],
-      video: "/video.mov",
+      video: "/interagration-service.mp4",
       testimonial: <PopUp videoIndexes={[2]} />
     },
     {
@@ -110,7 +110,7 @@ useEffect(() => {
         "Iterate quickly with agile development practices.",
         "Build the future by leveraging data-driven design.",
       ],
-      video: "/video.mov",
+      video: "/Poduct_deveopment.mp4",
       testimonial: <PopUp videoIndexes={[3]} />
     },
   ];

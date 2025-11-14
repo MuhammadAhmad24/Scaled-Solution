@@ -941,12 +941,10 @@ export default function Home() {
             {/* Card 1 */}
             <Link href="/cloudservices">
               <div className={`${styles.card} ${styles.extraClass}`}>
-                <object
-                  type="image/svg+xml"
-                  data="/svgs/1.svg"
-                  className={styles.svgElementMobile}
+                <div
+                  className={styles.bgSvgElementcloud}
                   aria-label="Animated SVG"
-                />
+                ></div>
                 <div className={styles.title}>
                   <h3>
                     <span>Clouds</span> Services
@@ -974,12 +972,10 @@ export default function Home() {
             {/* Card 2 */}
             <Link href="/aidataservices">
               <div className={`${styles.card} ${styles.extraClass}`}>
-                <object
-                  type="image/svg+xml"
-                  data="/svgs/2.svg"
-                  className={styles.svgElementMobile}
+                <div
+                  className={styles.bgSvgElement}
                   aria-label="Animated SVG"
-                />
+                ></div>
                 <div className={styles.title}>
                   <h3>
                     <span>Ai & Data</span> Services
@@ -1007,12 +1003,10 @@ export default function Home() {
             {/* Card 3 */}
             <Link href="/integrationservices">
               <div className={`${styles.card} ${styles.extraClass}`}>
-                <object
-                  type="image/svg+xml"
-                  data="/svgs/3.svg"
-                  className={styles.svgElementMobile}
+                <div
+                  className={styles.bgSvgElementintegration}
                   aria-label="Animated SVG"
-                />
+                ></div>
                 <div className={styles.title}>
                   <h3>
                     <span>Integration</span> Services
@@ -1042,12 +1036,10 @@ export default function Home() {
             {/* Card 4 */}
             <Link href="/productdevelopment">
               <div className={`${styles.card} ${styles.extraClass}`}>
-                <object
-                  type="image/svg+xml"
-                  data="/svgs/4.svg"
-                  className={styles.svgElementMobile}
+                <div
+                  className={styles.bgSvgElementproduct}
                   aria-label="Animated SVG"
-                />
+                ></div>
                 <div className={styles.title}>
                   <h3>
                     <span>Product</span> Development

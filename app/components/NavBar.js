@@ -285,12 +285,10 @@ useEffect(() => {
               <div className={styles.videoDiv}>
 
 
-                <object
-                  type="image/svg+xml"
-                  data="/svgs/1.svg"
-                  className={styles.svgElement}
+                <div
+                  className={styles.bgSvgElementcloud}
                   aria-label="Animated SVG"
-                />
+                ></div>
 
 
 
@@ -326,12 +324,10 @@ useEffect(() => {
               <div
                 className={styles.videoDiv}
               >
-                <object
-                  type="image/svg+xml"
-                  data="/svgs/3.svg"
-                  className={styles.svgElement}
+                <div
+                  className={styles.bgSvgElementintegration}
                   aria-label="Animated SVG"
-                />
+                ></div>
               </div>
             </div>
           </Link>
@@ -345,12 +341,10 @@ useEffect(() => {
               <div
                 className={styles.videoDiv}
               >
-                <object
-                  type="image/svg+xml"
-                  data="/svgs/4.svg"
-                  className={styles.svgElement}
+                <div
+                  className={styles.bgSvgElementproduct}
                   aria-label="Animated SVG"
-                />
+                ></div>
               </div>
             </div>
           </Link>
@@ -461,12 +455,10 @@ useEffect(() => {
                     <span>
                       <em>Cloud </em> Services
                     </span>
-                    <object
-                      type="image/svg+xml"
-                      data="/svgs/1.svg"
-                      className={styles.svgElementMobile}
+                    <div
+                      className={styles.bgSvgElementMobilecloud}
                       aria-label="Animated SVG"
-                    />
+                    ></div>
                   </div>
                 </Link>
 
@@ -493,12 +485,10 @@ useEffect(() => {
                       </span>
                       {/* <span>Power BI Experts</span> */}
                     </span>
-                    <object
-                      type="image/svg+xml"
-                      data="/svgs/3.svg"
-                      className={styles.svgElementMobile}
+                    <div
+                      className={styles.bgSvgElementMobileIntegration}
                       aria-label="Animated SVG"
-                    />
+                    ></div>
 
                   </div>
                 </Link>
@@ -508,12 +498,10 @@ useEffect(() => {
                     <span>
                       <em>Product </em>Development
                     </span>
-                    <object
-                      type="image/svg+xml"
-                      data="/svgs/4.svg"
-                      className={styles.svgElementMobile}
+                    <div
+                      className={styles.bgSvgElementMobileproduct}
                       aria-label="Animated SVG"
-                    />
+                    ></div>
                   </div>
                 </Link>
 

@@ -38,7 +38,7 @@ export default function ServicesPage() {
             
             <div className="video-box">
               <video
-                src="/video.mov"
+                src="/Poduct_deveopment.mp4"
                 controls
                 muted
                 playsInline
