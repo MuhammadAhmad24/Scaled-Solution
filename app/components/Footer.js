@@ -69,17 +69,17 @@ function Footer() {
           </div>
           <div className={styles.space}></div>
           <div className={styles.linksCol}>
-            <Link href="">About</Link>
+            <Link href="/about">About</Link>
             <Link href="">Careers</Link>
             <Link href="">Team</Link>
             <Link href="">Clients</Link>
-            <Link href="">Contact</Link>
+            <Link href="/contact">Contact</Link>
             <Link href="">Blog</Link>
             <Link href="">Privacy Policy</Link>
           </div>
           <div className={styles.space}></div>
           <div className={styles.linksCol}>
-            <p>© ventriloc 2024</p>
+            <p>© Scaled Solution 2024</p>
           </div>
           <div className={styles.space}></div>
           <div className={styles.linksCol}>
@@ -117,11 +117,11 @@ function Footer() {
             <Link href="">Analytical alignment</Link>
           </div>
           <div className={styles.linksCol}>
-            <Link href="">About</Link>
+            <Link href="/about">About</Link>
             <Link href="">Careers</Link>
             <Link href="">Team</Link>
             <Link href="">Clients</Link>
-            <Link href="">Contact</Link>
+            <Link href="/contact">Contact</Link>
             <Link href="">Blog</Link>
             <Link href="">Privacy Policy</Link>
           </div>
@@ -130,7 +130,7 @@ function Footer() {
         <div className={styles.copyRights}>
           <div className={styles.left}>
             <div className={styles.linksCol}>
-              <p>© ventriloc 2024</p>
+              <p>© Scaled Solution 2024</p>
             </div>
             <div className={styles.linksCol}>
               <Link href="">Cookies preferences</Link>
@@ -152,3 +152,4 @@ function Footer() {
 }
 
 export default Footer;
+

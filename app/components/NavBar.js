@@ -7,11 +7,19 @@ import Image from "next/image";
 
 function NavBar({ logoSrc = "/logo.png" }) {
 
+  const [success, setSuccess] = useState(false);
+
+  useEffect(() => {
+    if (window.location.search.includes("success=1")) {
+      setSuccess(true);
+    }
+  }, []);
+
   // const t = useTranslations("NavBar");
   // ------------------- State MenuServices ------------------- //
   const [menuServicesActive, setMenuServices] = useState(false);
-  // ------------------- State MenuVentriloc ------------------- //
-  const [menuVentrilocActive, setMenuVentriloc] = useState(false);
+  // ------------------- State MenuScaledSolution ------------------- //
+  const [menuScaledSolutionActive, setMenuScaledSolution] = useState(false);
   // ------------------- State MenuContact ------------------- //
   const [menuContactActive, setMenuContact] = useState(false);
   // ------------------- State MenuHamburger ------------------- //
@@ -19,7 +27,7 @@ function NavBar({ logoSrc = "/logo.png" }) {
   // ------------------- State MenuHamburger ------------------- //
   const [menuServicesInMenuActive, setMenuServicesInMenu] = useState(true);
   // ------------------- State MenuHamburger ------------------- //
-  const [menuVentrilocInMenuActive, setMenuVentrilocInMenu] = useState(true);
+  const [menuScaledSolutionInMenuActive, setMenuScaledSolutionInMenu] = useState(true);
 
   useEffect(() => {
     if (menuHamburgerActive) {
@@ -78,15 +86,15 @@ function NavBar({ logoSrc = "/logo.png" }) {
     }
     // // ------------------- Button 2 ------------------- //
     // const runCodeWhenBTN2Active = () => {
-    //   const menuVentrilocInMenuActive = document.querySelector(
-    //     `.${styles.menuVentrilocInMenu}`
+    //   const menuScaledSolutionInMenuActive = document.querySelector(
+    //     `.${styles.menuScaledSolutionInMenu}`
     //   );
     //   const btn_2 = document.querySelector(
     //     `.${styles.option_1} .${styles.body} .${styles.btn}:nth-child(2)`
     //   );
 
-    //   const heightMenuVentrilocInMenu = menuVentrilocInMenuActive.offsetHeight;
-    //   btn_2.style.height = 27 + heightMenuVentrilocInMenu + "px";
+    //   const heightMenuScaledSolutionInMenu = menuScaledSolutionInMenuActive.offsetHeight;
+    //   btn_2.style.height = 27 + heightMenuScaledSolutionInMenu + "px";
     // };
 
     // const resetHeightBtn_2 = () => {
@@ -96,7 +104,7 @@ function NavBar({ logoSrc = "/logo.png" }) {
     //   btn_2.style.height = "27px";
     // };
 
-    // if (menuVentrilocInMenuActive) {
+    // if (menuScaledSolutionInMenuActive) {
     //   runCodeWhenBTN2Active();
     // } else {
     //   resetHeightBtn_2();
@@ -107,8 +115,8 @@ function NavBar({ logoSrc = "/logo.png" }) {
       if (menuServicesActive) {
         setMenuServices(false); // close dropdown when scrolling
       }
-      if (menuVentrilocActive) {
-        setMenuVentriloc(false); // close dropdown when scrolling
+      if (menuScaledSolutionActive) {
+        setMenuScaledSolution(false); // close dropdown when scrolling
       }
       if (menuContactActive) {
         setMenuContact(false); // close dropdown when scrolling
@@ -123,67 +131,67 @@ function NavBar({ logoSrc = "/logo.png" }) {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [menuServicesActive, menuVentrilocActive, menuContactActive]);
+  }, [menuServicesActive, menuScaledSolutionActive, menuContactActive]);
 
   useEffect(() => {
-  // Services height
-  const menuServicesInMenu = document.querySelector(`.${styles.menuServicesInMenu}`);
-  const btn_1 = document.querySelector(`.${styles.option_1} .${styles.body} .${styles.btn}:nth-child(1)`);
-  if (menuServicesInMenuActive) {
-    btn_1.style.height = 27 + menuServicesInMenu.offsetHeight + "px";
-  } else {
-    btn_1.style.height = "27px";
-  }
-}, [menuServicesInMenuActive]);
+    // Services height
+    const menuServicesInMenu = document.querySelector(`.${styles.menuServicesInMenu}`);
+    const btn_1 = document.querySelector(`.${styles.option_1} .${styles.body} .${styles.btn}:nth-child(1)`);
+    if (menuServicesInMenuActive) {
+      btn_1.style.height = 27 + menuServicesInMenu.offsetHeight + "px";
+    } else {
+      btn_1.style.height = "27px";
+    }
+  }, [menuServicesInMenuActive]);
 
-useEffect(() => {
-  // Ventriloc height
-  const menuVentrilocInMenu = document.querySelector(`.${styles.menuVentrilocInMenu}`);
-  const btn_2 = document.querySelector(`.${styles.option_1} .${styles.body} .${styles.btn}:nth-child(2)`);
-  if (menuVentrilocInMenuActive) {
-    btn_2.style.height = 27 + menuVentrilocInMenu.offsetHeight + "px";
-  } else {
-    btn_2.style.height = "27px";
-  }
-}, [menuVentrilocInMenuActive]);
+  useEffect(() => {
+    // ScaledSolution height
+    const menuScaledSolutionInMenu = document.querySelector(`.${styles.menuScaledSolutionInMenu}`);
+    const btn_2 = document.querySelector(`.${styles.option_1} .${styles.body} .${styles.btn}:nth-child(2)`);
+    if (menuScaledSolutionInMenuActive) {
+      btn_2.style.height = 27 + menuScaledSolutionInMenu.offsetHeight + "px";
+    } else {
+      btn_2.style.height = "27px";
+    }
+  }, [menuScaledSolutionInMenuActive]);
 
 
   // ------------------- Active Menus ------------------- //
   const activateMenu = (menu) => {
     if (menu === "menuServices") {
       setMenuServices(!menuServicesActive); // تغيير حالة القائمة إلى الحالة المعاكسة
-      setMenuVentriloc(false); // إغلاق القوائم الأخرى
+      setMenuScaledSolution(false); // إغلاق القوائم الأخرى
       setMenuContact(false);
       setMenuHamburger(false);
-    } else if (menu === "menuVentriloc") {
-      setMenuVentriloc(!menuVentrilocActive); // تغيير حالة القائمة إلى الحالة المعاكسة
+    } else if (menu === "menuScaledSolution") {
+      setMenuScaledSolution(!menuScaledSolutionActive); // تغيير حالة القائمة إلى الحالة المعاكسة
       setMenuServices(false); // إغلاق القوائم الأخرى
       setMenuContact(false);
       setMenuHamburger(false);
     } else if (menu === "menuContact") {
       setMenuContact(!menuContactActive); // تغيير حالة القائمة إلى الحالة المعاكسة
       setMenuServices(false); // إغلاق القوائم الأخرى
-      setMenuVentriloc(false);
+      setMenuScaledSolution(false);
       setMenuHamburger(false);
     } else if (menu === "menuHamburger") {
       setMenuHamburger(!menuHamburgerActive); // تغيير حالة القائمة إلى الحالة المعاكسة
       setMenuServices(false); // إغلاق القوائم الأخرى
-      setMenuVentriloc(false);
+      setMenuScaledSolution(false);
       setMenuContact(false);
     } else if (menu === "menuServicesInMenu") {
       setMenuServicesInMenu(!menuServicesInMenuActive); // تغيير حالة القائمة إلى الحالة المعاكسة
       setMenuServices(false); // إغلاق القوائم الأخرى
-      setMenuVentriloc(false);
+      setMenuScaledSolution(false);
       setMenuContact(false);
-    } else if (menu === "menuVentrilocInMenu") {
-      setMenuVentrilocInMenu(!menuVentrilocInMenuActive); // تغيير حالة القائمة إلى الحالة المعاكسة
+    } else if (menu === "menuScaledSolutionInMenu") {
+      setMenuScaledSolutionInMenu(!menuScaledSolutionInMenuActive); // تغيير حالة القائمة إلى الحالة المعاكسة
       setMenuServices(false); // إغلاق القوائم الأخرى
-      setMenuVentriloc(false);
+      setMenuScaledSolution(false);
       setMenuContact(false);
     }
   };
 
-  
+
 
   return (
     <>
@@ -212,9 +220,9 @@ useEffect(() => {
               </svg>
             </button>
             <button
-              className={`${styles.link} ${menuVentrilocActive ? `${styles.active}` : ""
+              className={`${styles.link} ${menuScaledSolutionActive ? `${styles.active}` : ""
                 }`}
-              onClick={() => activateMenu("menuVentriloc")}
+              onClick={() => activateMenu("menuScaledSolution")}
             >
               Scaled Solutions
               <svg
@@ -228,14 +236,11 @@ useEffect(() => {
               </svg>
             </button>
             <div className={styles.btns}>
-              <button
-                className={`${styles.contactButton} ${menuContactActive ? `${styles.active}` : ""
-                  }`}
-                onClick={() => activateMenu("menuContact")}
-              >
+
+              <Link href="/contact" className={styles.contactButton}>
                 <span>Contact</span>
-                <span>Close</span>
-              </button>
+              </Link>
+
               {/* <button
               className={`${styles.btnMenuHamburger} ${menuHamburgerActive ? `${styles.active}` : ""
                 }`}
@@ -268,7 +273,7 @@ useEffect(() => {
           <div ></div>
           <div style={{ borderRadius: '1px white ' }} className={styles.contact}>
             <h3>Let&apos;s work together</h3>
-            <button>Make an appointment</button>
+            <Link href="/contact">Make an appointment</Link>
           </div>
         </div>
         <div className={styles.body} style={{ backgroundColor: "#0B1C23" }}>
@@ -352,18 +357,24 @@ useEffect(() => {
         </div>
       </menu>
       <menu
-        className={`${styles.menuVentriloc} ${menuVentrilocActive ? `${styles.active}` : ""
+        className={`${styles.menuScaledSolution} ${menuScaledSolutionActive ? `${styles.active}` : ""
           }`}
         style={{ border: '0px' }}
 
-      // onMouseLeave={() => setMenuVentriloc(false)}
+      // onMouseLeave={() => setMenuScaledSolution(false)}
       >
         <div className={styles.body} style={{ backgroundColor: "#0B1C23", border: "0px" }}
-          onMouseLeave={() => setMenuVentriloc(false)}>
+          onMouseLeave={() => setMenuScaledSolution(false)}>
           <div className={styles.links}>
-            <Link href="" className={styles.link}>
+            <Link href="/about" className={styles.link}>
               <span>About</span>
             </Link>
+
+            <Link href="/#faqs" className={styles.link}>
+              <span>Faqs</span>
+            </Link>
+
+
             <Link href="/teamexpansion" className={styles.link}>
               <span>Team Expansion</span>
             </Link>
@@ -394,34 +405,49 @@ useEffect(() => {
             <div className={styles.right}>
               <Link
                 className={styles.link}
-                href="https://www.linkedin.com/company/ventriloc"
+                href="mailto:contact@scaledsolutions.com.au"
               >
-                LinkedIn
+                Email
               </Link>
-              <Link className={styles.link} href="mailto:info@ScaledSol.ca">
-                info@ScaledSol.ca
+              <Link className={styles.link} href="mailto:contact@scaledsolutions.com.au">
+                contact@scaledsolutions.com.au
               </Link>
               <Link className={styles.link} href="tel:18193453223">
                 819-345-3223
               </Link>
             </div>
           </div>
-          <form className={styles.form}>
+
+          {success && (
+            <p className={styles.success}>
+              ✅ Thank you! We received your message.
+            </p>
+          )}
+
+          <form className={styles.form}
+            method="POST"
+            action="https://formsubmit.co/Admin@scaledsolutions.com.au"
+          >
             <div className={styles.top}>
               <div className={styles.left}>
-                <input type="text" placeholder="Name*" />
-                <input type="email" placeholder="E-mail" />
-                <input type="text" placeholder="Company" />
+                <input type="text" name="firstname" placeholder="First Name*" required autoComplete="given-name" />
+                <input type="email" name="email" placeholder="E-mail*" required autoComplete="email" />
+                <input type="text" name="company" placeholder="Company" autoComplete="off" />
               </div>
               <div className={styles.right}>
-                <input type="text" placeholder="First name*" />
-                <input type="tel" placeholder="Phone" aria-invalid="false" />
-                <input type="text" placeholder="I am looking for help for *" />
+                <input type="text" name="lastname" placeholder="Last name*" required autoComplete="family-name" />
+                <input type="text" name="help" placeholder="I am looking for help for *" required autoComplete="off" />
               </div>
             </div>
-            <input type="text" placeholder="Message" />
+
+            <input type="text" name="message" placeholder="Message*" required autoComplete="off" />
+
+            <input type="hidden" name="_next" value="http://scaledsolutions.vercel.app/?success=1" />
+            <input type="hidden" name="_captcha" value="false" />
+
             <button className={styles.btn}>Send</button>
           </form>
+
         </div>
       </menu>
       <menu
@@ -511,9 +537,9 @@ useEffect(() => {
               </menu>
             </button>
             <button
-              className={`${styles.btn} ${menuVentrilocInMenuActive ? `${styles.active}` : ""
+              className={`${styles.btn} ${menuScaledSolutionInMenuActive ? `${styles.active}` : ""
                 }`}
-              onClick={() => activateMenu("menuVentrilocInMenu")}
+              onClick={() => activateMenu("menuScaledSolutionInMenu")}
             >
               <div className={styles.head}>
                 <span>Scaled Solutions</span>
@@ -527,18 +553,19 @@ useEffect(() => {
                   <path d="M1 1L5 5L9 1" stroke="currentColor"></path>
                 </svg>
               </div>
-              <menu className={styles.menuVentrilocInMenu}>
-                <Link href="">About</Link>
+              <menu className={styles.menuScaledSolutionInMenu}>
+                <Link href="/about">About</Link>
+                <Link href="#faqs">FAQs</Link>
                 <Link href="/teamexpansion">Team Expansion</Link>
                 <Link href="/deliverypartner">Delivery Partner</Link>
               </menu>
             </button>
-            <Link className={styles.btn} href="">
+            <Link className={styles.btn} href="/contact">
               contact
             </Link>
             <div className={styles.contact}>
               <h3>Let&apos;s work together</h3>
-              <button>Make an appointment</button>
+              <Link href="/contact">Make an appointment</Link>
             </div>
           </div>
           <div className={styles.backGround}>
@@ -562,3 +589,10 @@ useEffect(() => {
 }
 
 export default NavBar;
+
+
+
+
+
+
+

@@ -190,7 +190,7 @@ export default function NewFooter() {
                 /> */}
               </span>
             </span>
-            <span className="footer-email-text">ScaleSol@gmail.com</span>
+            <span className="footer-email-text">contact@scaledsolutions.com.au</span>
           </a>
         </div>
         <div className="footer-top-wrap">
@@ -200,7 +200,7 @@ export default function NewFooter() {
               <div className="footer-menu-link">
                 {[
                   { text: "Home", href: "/" },
-                  { text: "About", href: "#" },
+                  { text: "About", href: "/about" },
                   { text: "Team Expansion", href: "/teamexpansion" },
                   { text: "Delivery Partner", href: "/deliverypartner" },
                   { text: "Contact", href: "/contact" },
@@ -229,7 +229,7 @@ export default function NewFooter() {
             </div>
 
 
-            <div className="footer-menu-wrap footer-menu-02 footer-animate">
+            {/* <div className="footer-menu-wrap footer-menu-02 footer-animate">
               <p className="paragraph-small text-gray-2">(OFFICE)</p>
               <div className="footer-menu-link">
                 <p className="paragraph-large">
@@ -238,7 +238,7 @@ export default function NewFooter() {
                   United States
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 

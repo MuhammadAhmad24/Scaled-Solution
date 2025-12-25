@@ -1,7 +1,6 @@
 /* ========== Team Expansion Page ========== */
 
 .team-hero {
-  background-color: var(--color-background-dark);
   color: var(--color-white);
   padding: 6rem 8%;
   padding-bottom: 0rem !important;
@@ -64,10 +63,6 @@
   transition: background 0.3s ease;
   margin-bottom: 3rem;
   margin-left: 10px;
-}
-
-.cta-btn:hover {
-  background-color: var(--color-hover);
 }
 
 /* ===== Right Column ===== */
@@ -173,14 +168,12 @@
 
 /* ===== The Offer Section ===== */
 .the-offer-section {
-    background-color: #0B1C23;
   padding: 6rem 8%;
   color: var(--color-white);
 }
 
 .main-offer-sec{
     padding: 5rem 3rem;
-    background-color: #041e29;
 }
 
 .offer-header {
@@ -393,7 +386,6 @@
 /* ===== Image Sections (Below Offer) ===== */
 
 .team-image-group {
-  background-color: var(--color-background-dark);
   padding: 6rem 8%;
   display: flex;
   flex-direction: column;
@@ -494,25 +486,30 @@
 .animated-grid {
   position: fixed;
   inset: 0;
-  background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
-  background-size: 80px 80px;
-  animation: gridMove 30s linear infinite;
-  z-index: 0;
+  z-index: -1;
+  background-image: url('/animations/bgGrid.svg');
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   pointer-events: none;
 }
 
-@keyframes gridMove {
-  from {
-    background-position: 0 0;
+
+@media (max-width:768px) {
+  .main-offer-sec{
+    padding: 3rem 1.5rem;
   }
-  to {
-    background-position: 80px 80px;
+
+  .cta-btn{
+    margin-bottom: 1rem;
+  }
+
+  .the-offer-section{
+    padding: 3rem 1rem;
   }
 }
-
-
-
 
 
 

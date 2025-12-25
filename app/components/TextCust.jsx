@@ -2,119 +2,120 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import styles from './styles/TextCust.css'
 
 gsap.registerPlugin(ScrollTrigger);
 
-const texts = ["300_Clients", "9_Products", "96_Live Web"];
+const TextCust = () => {
 
-function TextCust() {
-  const textRefs = useRef([]);
-  const pinContainerRef = useRef();
+  const parentRef = useRef(null);
+  const stepsRef = useRef([]);
+
+  const items = [
+    <div className="textAnimation" key="offer">
+      <h3>The Offer</h3>
+      <div className="offer-checklist">
+        <p><span className="check-icon">✓</span> A pool of 1100+ pre-vetted developers across web, mobile, blockchain and AI.</p>
+        <p><span className="check-icon">✓</span> Available in a simple month to month.</p>
+        <p><span className="check-icon">✓</span> Subscription based model.</p>
+      </div>
+    </div>,
+
+    <div className="textAnimation" key="direct">
+      <h3>Direct Developers</h3>
+      <img src="/animations/teamExpansion1.svg" alt="direct" />
+    </div>,
+
+    <div className="textAnimation" key="devteam">
+      <h3>Software Development Team</h3>
+      <img src="/animations/teamExpansion2.svg" alt="development" />
+    </div>,
+
+    <div className="textAnimation" key="agile">
+      <h3>Agile Squad</h3>
+      <img src="/animations/teamExpansion3.svg" alt="agile" />
+    </div>
+  ];
 
   useEffect(() => {
-    const stayDuration = 2.5;
-    const animDuration = 1.2;
+    const ctx = gsap.context(() => {
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: pinContainerRef.current,
-        start: "top top",
-        end: "+=1000",
-        scrub: true,
-        pin: true,
-        // markers: true,
-      },
+      const total = stepsRef.current.length;
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: parentRef.current,
+          start: "top top",
+          end: "+=" + window.innerHeight * total * 2.5,  // LONGER scroll = smoother
+          scrub: 0.8,  // smoother scrub
+          pin: true,
+        }
+      });
+
+      stepsRef.current.forEach((step, i) => {
+
+        const pos = i * 3;  // more spacing = smooth stay
+
+        // Fade In
+        tl.fromTo(
+          step,
+          { scale: 0.7, opacity: 0, filter: "blur(20px)" },
+          {
+            scale: 1,
+            opacity: 1,
+            filter: "blur(0px)",
+            duration: 1.5,
+            ease: "power2.out"
+          },
+          pos
+        );
+
+        // Stay visible (smooth hold)
+        tl.to(
+          step,
+          {
+            opacity: 1,
+            duration: 1.2
+          },
+          pos + 1.3
+        );
+
+        // Fade Out
+        tl.to(
+          step,
+          {
+            scale: 0.85,
+            opacity: 0,
+            filter: "blur(15px)",
+            duration: 1.5,
+            ease: "power2.inOut"
+          },
+          pos + 2
+        );
+
+      });
+
     });
 
-    textRefs.current.forEach((el, i) => {
-      const start = i * (stayDuration + animDuration);
-      tl.fromTo(
-        el,
-        { scale: 0, opacity: 0, filter: "blur(20px)" },
-        {
-          scale: 1,
-          opacity: 1,
-          filter: "blur(0px)",
-          duration: animDuration,
-          ease: "power2.out",
-        },
-        start
-      ).to(
-        el,
-        {
-          scale: 1.6,
-          opacity: 0,
-          filter: "blur(20px)",
-          duration: animDuration,
-          ease: "power2.in",
-        },
-        start + stayDuration
-      );
-    });
-
-    return () => {
-      tl.kill();
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
+    return () => ctx.revert();
   }, []);
 
+
   return (
-    <section
-      ref={pinContainerRef}
-      style={{
-        width: "82vw",
-        height: "100vh",
-        backgroundColor: "#0B1C23",
-        position: "relative",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        overflow: "hidden",
-        
-            // border: "1px solid #fff",
-        padding: "1rem",
-      }}
-    >
-      {texts.map((text, index) => (
-        <div
-          key={index}
-          ref={(el) => (textRefs.current[index] = el)}
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: "52%",
-            transform: "translate(-50%, -50%) ",
-            opacity: 0,
-            filter: "blur(20px)",
-            fontSize: "clamp(2rem, 9vw, 10rem)", // responsive font size
-            fontWeight: "700",
-            color: "#CBCBCB",
-            fontFamily: "'Inter', sans-serif",
-            whiteSpace: "nowrap",
-            textAlign: "center",
-            maxWidth: "100%",
-            willChange: "transform, opacity, filter",
-          }}
-        >
-          {text}
-        </div>
-      ))}
+    <section className="tc-parent" ref={parentRef}>
+      <div className="tc-inner">
+        {items.map((item, i) => (
+          <div
+            key={i}
+            className="tc-step"
+            ref={(el) => (stepsRef.current[i] = el)}
+          >
+            {item}
+          </div>
+        ))}
+      </div>
     </section>
   );
-}
+};
 
-export default function App() {
-  return (
-<div style={{ fontFamily: "'Inter', sans-serif",  overflow: "hidden" }}>
-
-      <div style={{ height: "200vh",
-        
-            // border: "1px solid #fff",
-       }}>
-        <TextCust />
-      </div>
-
-      
-    </div>
-  );
-}
+export default TextCust;

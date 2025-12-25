@@ -21,11 +21,11 @@ export default function DeliveryPartnerPage() {
       <section className="delivery-hero">
         <div className="animated-grid"></div>
         <div className="animated-circle"></div>
-        <svg class="hero-blob" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+        <svg className="hero-blob" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="blobGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#198190" stop-opacity="0.4" />
-              <stop offset="100%" stop-color="#00bcd4" stop-opacity="0.1" />
+              <stop offset="0%" stopColor="#198190" stopOpacity="0.4" />
+              <stop offset="100%" stopColor="#00bcd4" stopOpacity="0.1" />
             </linearGradient>
           </defs>
           <path fill="url(#blobGradient)">
@@ -64,7 +64,7 @@ export default function DeliveryPartnerPage() {
             </p>
 
             <a href="#core" className="cta-btn">Core Services</a>
-            <Link href="/productdevelopment">
+            <Link href="#case">
               <button className="cta-btn2">Case Studies</button>
             </Link>
           </div>
@@ -80,7 +80,7 @@ export default function DeliveryPartnerPage() {
         <h2 className="benefits-title">
           Our Core <span className="highlight">Services</span>
         </h2>
-        <div class="gradient-line"></div>
+        <div className="gradient-line"></div>
 
         <div className="core-services-container">
 
@@ -175,11 +175,11 @@ export default function DeliveryPartnerPage() {
               Tkxel serves a diverse range of industries, including:
             </p>
             <ul>
-              <li><i class="fa-solid fa-circle-check icon"></i>Healthcare</li>
-              <li><i class="fa-solid fa-circle-check icon"></i>Education</li>
-              <li><i class="fa-solid fa-circle-check icon"></i>Financial Services</li>
-              <li><i class="fa-solid fa-circle-check icon"></i>Retail</li>
-              <li><i class="fa-solid fa-circle-check icon"></i>Technology</li>
+              <li><i className="fa-solid fa-circle-check icon"></i>Healthcare</li>
+              <li><i className="fa-solid fa-circle-check icon"></i>Education</li>
+              <li><i className="fa-solid fa-circle-check icon"></i>Financial Services</li>
+              <li><i className="fa-solid fa-circle-check icon"></i>Retail</li>
+              <li><i className="fa-solid fa-circle-check icon"></i>Technology</li>
             </ul>
             <p>
               The company collaborates with clients ranging from startups to Fortune 500 companies, delivering scalable and innovative solutions.
@@ -192,8 +192,8 @@ export default function DeliveryPartnerPage() {
               Tkxel has been recognized for its rapid growth and excellence in service:
             </p>
             <ul>
-              <li> <i class="fa-solid fa-circle-check icon"></i> Featured on the Inc. 5000 list of fastest-growing private companies.</li>
-              <li> <i class="fa-solid fa-circle-check icon"></i> Certified in CMMI DEV 3, ISO 9001, ISO 27001, and ISO 20000 standards.</li>
+              <li> <i className="fa-solid fa-circle-check icon"></i> Featured on the Inc. 5000 list of fastest-growing private companies.</li>
+              <li> <i className="fa-solid fa-circle-check icon"></i> Certified in CMMI DEV 3, ISO 9001, ISO 27001, and ISO 20000 standards.</li>
             </ul>
           </div>
 
@@ -203,8 +203,8 @@ export default function DeliveryPartnerPage() {
               Tkxel actively engages in social initiatives and industry development:
             </p>
             <ul>
-              <li> <i class="fa-solid fa-circle-check icon"></i> Supports STEM education and tech bootcamps for youth.</li>
-              <li> <i class="fa-solid fa-circle-check icon"></i> Encourages volunteerism and sustainable technology practices.</li>
+              <li> <i className="fa-solid fa-circle-check icon"></i> Supports STEM education and tech bootcamps for youth.</li>
+              <li> <i className="fa-solid fa-circle-check icon"></i> Encourages volunteerism and sustainable technology practices.</li>
             </ul>
           </div>
 
@@ -214,16 +214,15 @@ export default function DeliveryPartnerPage() {
               Tkxel remains committed to empowering communities through technology education, sustainability, and inclusive hiring initiatives.
             </p>
             <ul>
-              <li> <i class="fa-solid fa-circle-check icon"></i> Promotes sustainability and green tech programs.</li>
-              <li> <i class="fa-solid fa-circle-check icon"></i> Fosters workplace diversity and inclusion.</li>
+              <li> <i className="fa-solid fa-circle-check icon"></i> Promotes sustainability and green tech programs.</li>
+              <li> <i className="fa-solid fa-circle-check icon"></i> Fosters workplace diversity and inclusion.</li>
             </ul>
           </div>
 
         </div>
       </section>
 
-
-
+      <div id="case"></div>
       <SuccessStoriesSection />
 
 

@@ -20,6 +20,7 @@
   left: 0;
   width: 100%;
   height: 600px;
+  z-index: 999;
   /* z-index: -2; */
 }
 .Footer svg:nth-child(2) {

@@ -28,7 +28,6 @@
 /* ========== Services Page Styles ========== */
 
 .services-hero {
-  background-color: #0B1C23;
   /* dark teal background */
   color: white;
   /* min-height: 100vh; */
@@ -186,7 +185,6 @@
 /* ========== Cloud Strategy & Advisory Section ========== */
 
 .strategy-section {
-  background-color: #0B1C23;
   padding: 3rem 8% 6rem;
   /* top reduced to 3rem, bottom remains 6rem */
   color: white;
@@ -312,31 +310,15 @@
 .animated-grid {
   position: fixed;
   inset: 0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-  background-size: 80px 80px;
-  animation: gridMove 30s linear infinite;
-  z-index: 0;
+  z-index: -1;
+  background-image: url('/animations/bgGrid.svg');
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   pointer-events: none;
 }
-
-@keyframes gridMove {
-  from {
-    background-position: 0 0;
-  }
-
-  to {
-    background-position: 80px 80px;
-  }
-}
-
-
-
-
-
-
-
-
 
 
 
@@ -403,7 +385,6 @@
 
 .migration-section {
   padding: 0 3% 80px;
-  background-color: #0A1C23;
 }
 
 .migration-section>h3 {
@@ -488,14 +469,13 @@
   }
 }
 
-@media (max-width: 1500px) {
   .card-wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
+    max-width: 1400px;
+    margin: auto;
   }
-
-}
 
 @media (max-width: 1000px) {
   .card-wrapper {
@@ -506,6 +486,14 @@
 @media (max-width: 768px) {
   .card-wrapper {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .strategy-section, .services-hero{
+    padding-bottom: 3rem;
+  }
+
+  .services-hero{
+    padding-top: 3rem;
   }
 }
 

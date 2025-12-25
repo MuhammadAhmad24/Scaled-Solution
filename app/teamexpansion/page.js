@@ -15,11 +15,11 @@ export default function TeamExpansionPage() {
       <section className="team-hero">
         <div className="animated-circle"></div>
                 <div className="animated-grid"></div>
-        <svg class="hero-blob" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+        <svg className="hero-blob" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="blobGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#198190" stop-opacity="0.4" />
-              <stop offset="100%" stop-color="#00bcd4" stop-opacity="0.1" />
+              <stop offset="0%" stopColor="#198190" stopOpacity="0.4" />
+              <stop offset="100%" stopColor="#00bcd4" stopOpacity="0.1" />
             </linearGradient>
           </defs>
           <path fill="url(#blobGradient)">
@@ -43,7 +43,7 @@ export default function TeamExpansionPage() {
               <button className="cta-btn">Let’s Collaborate</button>
             </Link>
 
-            <Link href="/productdevelopment">
+            <Link href="/deliverypartner#case">
               <button className="cta-btn cta-btn2">Case Studies</button>
             </Link>
           </div>
@@ -122,7 +122,7 @@ export default function TeamExpansionPage() {
         <div className="image-section">
           <h2 className="image-section-title" id="directdevelopers">Direct Developers</h2>
           <img
-            src="https://scaledsols.my.canva.site/_assets/media/fa5edcbc47a0baabf9448a29b319ac30.png"
+            src="/animations/teamExpansion1.svg"
             alt="Direct Developers"
             className="image-section-img"
           />
@@ -132,7 +132,7 @@ export default function TeamExpansionPage() {
         <div className="image-section" id="softwaredev">
           <h2 className="image-section-title">Software Development Team</h2>
           <img
-            src="https://scaledsols.my.canva.site/_assets/media/3ff24e31e7f25081a8791b6f8ef44732.png"
+            src="/animations/teamExpansion2.svg"
             alt="Software Development Team"
             className="image-section-img"
           />
@@ -142,7 +142,7 @@ export default function TeamExpansionPage() {
         <div className="image-section" id="agilesquad">
           <h2 className="image-section-title">Agile Squad</h2>
           <img
-            src="https://scaledsols.my.canva.site/_assets/media/be290c6512d40e2694bfd8f35160f4b8.png"
+            src="/animations/teamExpansion3.svg"
             alt="Agile Squad"
             className="image-section-img"
           />

@@ -5,10 +5,10 @@ import "./globals.css";
 const urbanist = Urbanist({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Scaled Solutions - We turn data into value",
-  description: "Made With Love By Scaled Solutions",
+  title: "Scaled Solutions - Cloud | Data | AI | Product Development",
+  description: "Smart, Scaleable, Secure That's Cloud With Us",
   icons: {
-    icon: "/icons/favicon.ico",
+    icon: "/icons/favicon.ICO",
   },
 };
 

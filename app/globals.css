@@ -45,3 +45,9 @@ button {
   text-decoration: none;
   cursor: pointer;
 }
+
+.textcust-pin-area{
+  width: 100%;
+  position: relative;
+  z-index: 99999;
+}
