@@ -69,11 +69,11 @@ function Footer() {
           </div>
           <div className={styles.space}></div>
           <div className={styles.linksCol}>
-            <Link href="/about">About</Link>
+            <Link href="">About</Link>
             <Link href="">Careers</Link>
             <Link href="">Team</Link>
             <Link href="">Clients</Link>
-            <Link href="/contact">Contact</Link>
+            <Link href="">Contact</Link>
             <Link href="">Blog</Link>
             <Link href="">Privacy Policy</Link>
           </div>
@@ -117,11 +117,11 @@ function Footer() {
             <Link href="">Analytical alignment</Link>
           </div>
           <div className={styles.linksCol}>
-            <Link href="/about">About</Link>
+            <Link href="">About</Link>
             <Link href="">Careers</Link>
             <Link href="">Team</Link>
             <Link href="">Clients</Link>
-            <Link href="/contact">Contact</Link>
+            <Link href="">Contact</Link>
             <Link href="">Blog</Link>
             <Link href="">Privacy Policy</Link>
           </div>

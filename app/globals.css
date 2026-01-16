@@ -51,3 +51,7 @@ button {
   position: relative;
   z-index: 99999;
 }
+
+.faqWrapper{
+  width: 100%;
+}

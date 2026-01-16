@@ -13,8 +13,6 @@
 
 body {
   font-family: Inter, system-ui, sans-serif;
-  color: var(--dark);
-  background: #fff;
 }
 
 .hero-blob {
@@ -35,24 +33,6 @@ body {
 
   to {
     transform: translateY(-20px) scale(1.05);
-  }
-}
-
-.animated-circle {
-  position: absolute;
-  top: -120px;
-  left: -120px;
-  width: 420px;
-  height: 420px;
-  background: radial-gradient(circle, rgba(124, 92, 255, 0.25), transparent 70%);
-  border-radius: 50%;
-  filter: blur(80px);
-  animation: floaty 8s ease-in-out infinite alternate;
-}
-
-@keyframes floaty {
-  to {
-    transform: translateY(30px);
   }
 }
 
@@ -99,7 +79,7 @@ section h2 {
 
 .about-section .about-text {
   margin: 20px 0;
-  font-size: 18px;
+  font-size: 24px;
   color: var(--color-white);
 }
 
@@ -113,7 +93,7 @@ section h2 {
   list-style: none;
   color: #b8c4c6;
   line-height: 1.9;
-  font-size: 18px;
+  font-size: 22px;
   /* slightly larger for readability */
 }
 
@@ -181,18 +161,19 @@ section h2 {
   flex-direction: column;
 }
 
-.partner h2,.partner h3 {
+.partner h2,
+.partner h3 {
   font-size: 15px;
   font-weight: 300;
   font-family: "PolySans";
 }
 
-.partner h3{
+.partner h3 {
   margin-top: 1rem;
   color: var(--color-white);
 }
 
-.partner h3 span{
+.partner h3 span {
   font-weight: 700;
 }
 
@@ -275,8 +256,7 @@ section h2 {
 
 @media (max-width: 600px) {
 
-  .hero-blob,
-  .animated-circle {
+  .hero-blob {
     display: none;
   }
 
@@ -298,14 +278,74 @@ section h2 {
     padding: 3rem 1.25rem;
   }
 
-  .marquee .marquee__inner .marquee__part{
+  .marquee .marquee__inner .marquee__part {
     width: 100px;
     min-height: unset;
   }
 
-  .partner{
+  .partner {
     gap: 1rem;
   }
 
 
+}
+
+
+/* === Floating Gradient Orbs === */
+.floating-accents {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.accent {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.25;
+  animation: floatMove 40s ease-in-out infinite;
+}
+
+.accent1 {
+  background: radial-gradient(circle, #6aa9ff 0%, transparent 70%);
+  top: 10%;
+  left: -10%;
+  animation-delay: 0s;
+}
+
+.accent2 {
+  background: radial-gradient(circle, #8f6bff 0%, transparent 70%);
+  bottom: 20%;
+  right: -10%;
+  animation-delay: 10s;
+}
+
+.accent3 {
+  background: radial-gradient(circle, #00c6ff 0%, transparent 70%);
+  top: 50%;
+  left: 60%;
+  animation-delay: 20s;
+}
+
+@keyframes floatMove {
+
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+
+  50% {
+    transform: translateY(-40px) translateX(30px);
+  }
+}
+
+@media (max-width:600px) {
+
+  .floating-accents {
+    display: none;
+  }
 }

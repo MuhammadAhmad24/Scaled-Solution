@@ -305,7 +305,7 @@ function NavBar({ logoSrc = "/logo.png" }) {
           <Link href="/aidataservices">
             <div className={styles.card} >
               <h3 className={styles.headText}>
-                <span>Ai & Data</span> Services
+                <span>AI & Data</span> Services
               </h3>
 
               <div
@@ -370,7 +370,7 @@ function NavBar({ logoSrc = "/logo.png" }) {
               <span>About</span>
             </Link>
 
-            <Link href="/#faqs" className={styles.link}>
+            <Link href="/faq" className={styles.link}>
               <span>Faqs</span>
             </Link>
 
@@ -491,7 +491,7 @@ function NavBar({ logoSrc = "/logo.png" }) {
                 <Link href="/aidataservices">
                   <div className={styles.card}>
                     <span>
-                      <em>Ai & Data </em> Services
+                      <em>AI & Data </em> Services
                     </span>
 
                     <div
@@ -555,7 +555,7 @@ function NavBar({ logoSrc = "/logo.png" }) {
               </div>
               <menu className={styles.menuScaledSolutionInMenu}>
                 <Link href="/about">About</Link>
-                <Link href="#faqs">FAQs</Link>
+                <Link href="/faq">FAQs</Link>
                 <Link href="/teamexpansion">Team Expansion</Link>
                 <Link href="/deliverypartner">Delivery Partner</Link>
               </menu>
@@ -589,7 +589,6 @@ function NavBar({ logoSrc = "/logo.png" }) {
 }
 
 export default NavBar;
-
 
 
 

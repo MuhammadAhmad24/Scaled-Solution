@@ -131,7 +131,7 @@
 }
 
 .section_2 svg path {
-  strokeWidth: 0.5px;
+  stroke-Width: 0.5px;
 }
 
 .section_2 svg:nth-child(2) path {
@@ -862,12 +862,6 @@
   display: none;
 }
 
-.section_5 .faq {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-}
-
 
 .animatedCircle {
   position: absolute;
@@ -971,106 +965,6 @@
   transform: "scale(1.6)";
   transform-origin: "center";
 
-}
-
-.section_5 .faq .left {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  gap: 3rem;
-}
-
-.section_5 .faq .left h2 {
-  font-size: 40px;
-  color: rgb(237, 208, 198);
-  font-family: "PolySans";
-  font-weight: 300;
-}
-
-.section_5 .faq .left p {
-  font-family: "PolySans";
-  max-width: 300px;
-  font-size: 18px;
-  color: #198190;
-  font-weight: 300;
-}
-
-.section_5 .faq .questions {
-  width: 100%;
-  /* height: 100%; */
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.section_5 .faq .questions .question {
-  background-color: transparent;
-  padding: 15px 30px;
-  width: 100%;
-  border: 1px solid #2996a7;
-  border-radius: 10px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  gap: 1.5rem;
-  cursor: pointer;
-}
-
-.section_5 .faq .questions .question .head {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 30px;
-}
-
-.section_5 .faq .questions .question .head svg {
-  transition: transform 450ms cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
-.section_5 .faq .questions .question .head svg path {
-  fill: rgb(237, 208, 198);
-}
-
-.section_5 .faq .questions .question:hover .head svg {
-  transform: rotate(180deg);
-}
-
-.section_5 .faq .questions .question .head p {
-  font-size: 20px;
-  font-weight: 400;
-  color: rgb(237, 208, 198);
-  font-family: "PolySans";
-  text-align: start;
-  width: 100%;
-}
-
-.section_5 .faq .questions .question .answer {
-  display: none;
-  text-align: left;
-  padding-left: 39px;
-  /* padding-bottom: 1rem; */
-  font-size: 18px;
-  font-weight: 400;
-  color: rgb(237, 208, 198);
-  font-family: "PolySans";
-}
-
-.section_5 .faq .questions .question.active .answer {
-  display: block;
-}
-
-.section_5 .faq .questions .question.active .head svg path {
-  fill: #2996a7;
-}
-
-.section_5 .faq .questions .question.active .head svg {
-  transform: rotate(-45deg);
 }
 
 /* ------------------- Section 6 ------------------- */
@@ -1386,16 +1280,6 @@
   .section_4 .BackGround {
     height: 100%;
     padding: 0;
-  }
-
-  .section_5 .faq {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 3rem;
-    overflow: hidden !important;
-  }
-
-  .section_5 .faq .left {
-    gap: 1.5rem;
   }
 
   .section_5 .sticky {
@@ -1726,48 +1610,6 @@
   .section_6 .body .hr {
     width: calc(100% - 40px);
     margin: 0 20px;
-  }
-
-  .section_5 .faq {
-    gap: 2rem;
-  }
-
-  .section_5 .faq .left {
-    gap: 1rem;
-  }
-
-  .section_5 .faq .left h2 {
-    font-size: 26px;
-  }
-
-  .section_5 .faq .left p {
-    font-size: 16px;
-    max-width: 100%;
-  }
-
-  .section_5 .faq .questions .question .head p {
-    font-size: 16px;
-  }
-
-  .section_5 .faq .questions .question .answer {
-    font-size: 14.4px;
-  }
-
-  .section_5 .faq .questions .question .head svg {
-    width: 10px !important;
-    height: 10px !important;
-  }
-
-  .section_5 .faq .questions .question {
-    padding: 13px 20px;
-  }
-
-  .section_5 .faq .questions .question .head {
-    gap: 20px;
-  }
-
-  .section_5 .faq .questions .question .answer {
-    padding-left: 30px;
   }
 
   .section_3 .head h2 {

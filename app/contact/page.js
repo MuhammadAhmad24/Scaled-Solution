@@ -30,14 +30,17 @@ export default function ServicesPage() {
                 <br /> Now lets make an appointment.
               </p>
             </div>
-            <div className="right">
-              <Link className="link" href="mailto:contact@scaledsolutions.com.au">
-                Email
-              </Link>
-              <Link className="link" href="mailto:contact@scaledsolutions.com.au">
-                contact@scaledsolutions.com.au
-              </Link>
-
+            <div className="left">
+              <p>Contact:</p>
+              <div>
+                Scaled Solutions Pty Ltd <br/> Level 1, 1.01, 222 <br/> Pitt Street Sydney NSW 2000  <br/> 
+                <a className="link" href="tel:+1300128930">
+                Phone: 1300128930
+                </a><br/>
+                <a className="link" href="mailto:contact@scaledsolutions.com.au">
+                Email: contact@scaledsolutions.com.au
+                </a>
+              </div>
             </div>
           </div>
 

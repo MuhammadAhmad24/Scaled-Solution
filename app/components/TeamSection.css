@@ -58,6 +58,10 @@
     transition: ease all 0.3s;
 }
 
+.team-info a {
+    margin-bottom: 1rem;
+}
+
 .card-info a {
     display: inline-flex;
     align-items: center;
@@ -68,10 +72,18 @@
     background-color: var(--color-primary);
 }
 
+.team-thumbs-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .team-thumbs {
     display: flex;
     gap: 1.2rem;
     margin-top: auto;
+    max-width: 340px;
+    overflow: hidden;
 }
 
 .team-thumbs img {
@@ -120,8 +132,14 @@
     font-weight: 400;
 }
 
+.btn-wrapper{
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
 .team-mobile .swiper-button-prev,
-.team-mobile .swiper-button-next {
+.team-mobile .swiper-button-next, .arrow-btn {
     width: 45px;
     height: 45px;
     border-radius: 50%;
@@ -131,6 +149,15 @@
     background-color: var(--color-white);
     bottom: 0px;
     top: unset;
+}
+
+.arrow-btn{
+    border: none;
+}
+
+.arrow-btn i{
+    color: #0D1D23;
+    font-size: 18px;
 }
 
 .team-mobile .swiper {
@@ -156,6 +183,12 @@
 .card-info p {
     font-size: 1rem;
     margin-bottom: 1rem;
+}
+
+@media (min-width: 1200px) {
+    .team-thumbs {
+    max-width: 470px;
+}
 }
 
 @media (max-width: 990px) {

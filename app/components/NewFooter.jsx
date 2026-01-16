@@ -171,7 +171,7 @@ export default function NewFooter() {
 
         <div className="footer-email-row" >
           <a
-            href="mailto:hello@finlay.studio"
+            href="mailto:contact@scaledsolutions.com.au"
             className="footer-top-heading email-animate"
           >
             <span className="footer-email-icon-wrap">
@@ -182,16 +182,31 @@ export default function NewFooter() {
                   className="footer-arrow-icon arrow-orange"
                   loading="lazy"
                 />
-                {/* <img
-                  src="https://cdn.prod.website-files.com/67ed8747a07565224d85b333/67fb6925ee648dcac77e467f_arrow-right%20(1).svg"
-                  alt=""
-                  className="footer-arrow-icon arrow-black"
-                  loading="lazy"
-                /> */}
               </span>
             </span>
             <span className="footer-email-text">contact@scaledsolutions.com.au</span>
           </a>
+        </div>
+
+        <div className="footer-email-row">
+          <div className="footer-menu-link">
+            <a
+            href="tel:+1300128930"
+            className="footer-top-heading email-animate"
+          >
+            <span className="footer-email-icon-wrap">
+              <span className="footer-icon-wrap">
+                <img
+                  src="https://cdn.prod.website-files.com/67ed8747a07565224d85b333/67ee8b55a19679baad70ddf9_arrow-right%20(2).svg"
+                  alt=""
+                  className="footer-arrow-icon arrow-orange"
+                  loading="lazy"
+                />
+              </span>
+            </span>
+            <span className="footer-email-text">Phone: 1300128930</span>
+          </a>
+          </div>
         </div>
         <div className="footer-top-wrap">
           <div className="footer-content-wrap">
@@ -217,7 +232,7 @@ export default function NewFooter() {
               <div className="footer-menu-link">
                 {[
                   { text: "Cloud Services", href: "/cloudservices" },
-                  { text: "Ai & Data Services", href: "/aidataservices" },
+                  { text: "AI & Data Services", href: "/aidataservices" },
                   { text: "Integration Services", href: "/integrationservices" },
                   { text: "Product Development", href: "/productdevelopment" },
                 ].map((item, i) => (
@@ -229,16 +244,14 @@ export default function NewFooter() {
             </div>
 
 
-            {/* <div className="footer-menu-wrap footer-menu-02 footer-animate">
-              <p className="paragraph-small text-gray-2">(OFFICE)</p>
+            <div className="footer-menu-wrap footer-menu-02 footer-animate">
+              <p className="paragraph-small text-gray-2">(Address)</p>
               <div className="footer-menu-link">
                 <p className="paragraph-large">
-                  123 Maplewood Drive<br />
-                  Springfield, IL 62704<br />
-                  United States
+                  Scaled Solutions Pty Ltd <br /> Level 1, 1.01, 222 Pitt Street<br />Sydney NSW 2000
                 </p>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
 

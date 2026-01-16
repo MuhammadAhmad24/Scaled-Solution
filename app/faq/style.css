@@ -1,0 +1,101 @@
+.faq-wrapper {
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 30px;
+    position: relative;
+}
+
+/* === Floating Gradient Orbs === */
+.floating-accents {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.accent {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.25;
+    animation: floatMove 40s ease-in-out infinite;
+}
+
+.accent1 {
+    background: radial-gradient(circle, #6aa9ff 0%, transparent 70%);
+    top: 10%;
+    left: -10%;
+    animation-delay: 0s;
+}
+
+.accent2 {
+    background: radial-gradient(circle, #8f6bff 0%, transparent 70%);
+    bottom: 20%;
+    right: -10%;
+    animation-delay: 10s;
+}
+
+.accent3 {
+    background: radial-gradient(circle, #00c6ff 0%, transparent 70%);
+    top: 50%;
+    left: 60%;
+    animation-delay: 20s;
+}
+
+@keyframes floatMove {
+
+    0%,
+    100% {
+        transform: translateY(0px) translateX(0px);
+    }
+
+    50% {
+        transform: translateY(-40px) translateX(30px);
+    }
+}
+
+.animated-grid {
+    position: fixed;
+    inset: 0;
+    background-image: url("/animations/bgGrid.svg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.hero-blob {
+    position: absolute;
+    right: -120px;
+    bottom: -250px;
+    width: 600px;
+    height: 600px;
+    opacity: 0.6;
+    filter: blur(50px);
+    animation: slowFloat 18s ease-in-out infinite alternate;
+}
+
+@keyframes slowFloat {
+    from {
+        transform: translateY(0) scale(1);
+    }
+
+    to {
+        transform: translateY(-20px) scale(1.05);
+    }
+}
+
+@media (max-width:600px) {
+
+    .floating-accents,
+    .hero-blob {
+        display: none;
+    }
+
+    .faq-wrapper {
+        padding: 3rem 1.25rem;
+    }
+}

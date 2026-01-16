@@ -69,7 +69,11 @@ useEffect(() => {
 
       {/* ===== ABOUT ===== */}
       <section className="about-section">
-        <div className="animated-circle"></div>
+        <div className="floating-accents">
+          <div className="accent accent1"></div>
+          <div className="accent accent2"></div>
+          <div className="accent accent3"></div>
+        </div>
         <div className="animated-grid"></div>
 
         <svg className="hero-blob" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
